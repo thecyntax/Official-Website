@@ -7,3 +7,9 @@
 .playfair {
   font-family: "Playfair Display", serif;
 }
+
+.hero-section-bg {
+  background-image: url("./assets/images/hero-images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
