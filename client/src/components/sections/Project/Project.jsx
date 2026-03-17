@@ -16,12 +16,12 @@ const Project = () => {
     <section id="projects" className="w-full min-h-screen bg-[#f5f5f5] py-20 px-6 md:px-12 flex flex-col justify-center font-sans">
       
       {/* Top Section: Logo Grid */}
-      <div className="w-full max-w-[1600px] mx-auto mb-32 md:mb-48">
+      <div className="w-full max-w-400 mx-auto mb-32 md:mb-48">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {logos.map((logo) => (
             <div 
               key={logo.id} 
-              className="bg-white rounded-[20px] aspect-[4/3] flex items-center justify-center p-6 transition-transform hover:scale-[1.02] cursor-pointer"
+              className="bg-white rounded-[20px] aspect-4/3 flex items-center justify-center p-6 transition-transform hover:scale-[1.02] cursor-pointer"
             >
               {logo.content}
             </div>
@@ -30,7 +30,7 @@ const Project = () => {
       </div>
 
       {/* Bottom Section: Typography Layout */}
-      <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12 lg:gap-0">
+      <div className="w-full max-w-400 mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12 lg:gap-0">
         
         {/* Left: Item Count */}
         <div className="w-full lg:w-1/4">
@@ -53,7 +53,7 @@ const Project = () => {
 
         {/* Right: Descriptive Text */}
         <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
-          <p className="text-gray-500 text-[15px] font-medium leading-[1.6] max-w-[260px]">
+          <p className="text-gray-500 text-[15px] font-medium leading-[1.6] max-w-65">
             We've helped businesses across industries achieve their goals. Here are some of our recent projects.
           </p>
         </div>
