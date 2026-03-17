@@ -51,10 +51,10 @@ const Service = () => {
 
   return (
     // Background uses a dark gradient to mimic the slight lighting texture in the screenshot
-    <section className="w-full min-h-screen bg-[#0a0a0a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1a1a1a] via-[#0a0a0a] to-[#050505] text-white rounded-t-[2.5rem] pt-16 pb-32 px-6 md:px-12 font-sans overflow-hidden shadow-2xl transition-all">
+    <section className="w-full min-h-screen bg-[#0a0a0a] bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-[#1a1a1a] via-[#0a0a0a] to-[#050505] text-white rounded-t-[2.5rem] pt-16 pb-32 px-6 md:px-12 font-sans overflow-hidden shadow-2xl transition-all">
       
       {/* 1. Header Section */}
-      <div className="relative w-full max-w-[1600px] mx-auto flex justify-center items-center mt-8 mb-32 md:mb-40">
+      <div className="relative w-full max-w-400 mx-auto flex justify-center items-center mt-8 mb-32 md:mb-40">
         
         {/* Top Left Badge */}
         <div className="absolute left-0 top-4 flex items-center gap-2.5">
@@ -76,7 +76,7 @@ const Service = () => {
       </div>
 
       {/* 2. Interactive Accordion List */}
-      <div className="w-full max-w-[1600px] mx-auto flex flex-col">
+      <div className="w-full max-w-400 mx-auto flex flex-col">
         
         {servicesData.map((service) => {
           const isExpanded = expandedId === service.id;
@@ -85,7 +85,7 @@ const Service = () => {
             <div 
               key={service.id} 
               onClick={() => handleToggle(service.id)}
-              className={`border-b border-white/10 transition-colors cursor-pointer group ${isExpanded ? 'pb-12 pt-4' : 'py-8 hover:bg-white/[0.02]'}`}
+              className={`border-b border-white/10 transition-colors cursor-pointer group ${isExpanded ? 'pb-12 pt-4' : 'py-8 hover:bg-white/2'}`}
             >
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                 
@@ -99,7 +99,7 @@ const Service = () => {
                   <>
                     {/* Expanded Content: Image & Description */}
                     <div className="md:col-span-5 flex flex-col xl:flex-row gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                      <div className="w-[140px] h-[80px] bg-gray-800 rounded-xl overflow-hidden relative shrink-0 shadow-lg">
+                      <div className="w-35 h-20 bg-gray-800 rounded-xl overflow-hidden relative shrink-0 shadow-lg">
                         <img 
                           src={service.image} 
                           alt={service.title} 
@@ -122,7 +122,7 @@ const Service = () => {
                             service.title
                           )}
                         </h3>
-                        <p className="text-[14px] text-gray-400 leading-[1.6] max-w-[340px] font-medium">
+                        <p className="text-[14px] text-gray-400 leading-[1.6] max-w-85 font-medium">
                           {service.description}
                         </p>
                       </div>
@@ -131,7 +131,7 @@ const Service = () => {
                     {/* Expanded Content: Categories Tags */}
                     <div className="md:col-span-5 flex flex-col gap-3 pt-2 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
                       <span className="text-[11px] text-gray-500 font-medium tracking-wide">Categories</span>
-                      <div className="flex flex-wrap gap-2.5 max-w-[420px]">
+                      <div className="flex flex-wrap gap-2.5 max-w-105">
                         {service.categories.map((category, index) => (
                           <span key={index} className="bg-white text-black text-[11px] font-bold px-3.5 py-1.5 rounded-full tracking-wide hover:bg-gray-200 transition-colors cursor-default">
                             {category}
