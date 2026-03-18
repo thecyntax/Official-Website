@@ -13,9 +13,9 @@ const Hero = () => {
               <span className="text-[300px] font-semibold ">syntax</span>
             </h1>
             <div className="flex items-center justify-between my-[170px] ">
-              <Plus className="text-[#767676]" />
-              <Plus className="text-[#767676]" />
-              <Plus className="text-[#767676]" />
+              <Plus className="text-[#e4e4e4]" />
+              <Plus className="text-[#e4e4e4]" />
+              <Plus className="text-[#e4e4e4]" />
             </div>
           </div>
 
@@ -27,7 +27,7 @@ const Hero = () => {
               <p>Growth-Driven Digital Marketing </p>
             </div>
             <div className="my-[170px]">
-              <Plus className="text-[#767676]" />
+              <Plus className="text-[#e4e4e4]" />
             </div>
           </div>
         </div>
