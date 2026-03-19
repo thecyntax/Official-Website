@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const clients = [
   {
     id: "logo-ipsum",
     label: "Logo Ipsum",
     logo: (
-      <svg viewBox="0 0 110 44" width="110" height="44" xmlns="http://www.w3.org/2000/svg" className="client-svg">
+      <svg viewBox="0 0 110 44" width="110" height="44" xmlns="http://www.w3.org/2000/svg">
         <text x="0" y="32" fontFamily="inherit" fontWeight="700" fontSize="28" letterSpacing="-2" fill="currentColor">
           LOGO
         </text>
@@ -19,16 +19,10 @@ const clients = [
     id: "warpspeed",
     label: "Warpspeed",
     logo: (
-      <span style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "15px", fontWeight: 500 }}>
+      <span className="flex items-center gap-1.5 text-[15px] font-medium">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-            stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
-          />
-          <path
-            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-            stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
-          />
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         Warpspeed
       </span>
@@ -38,7 +32,7 @@ const clients = [
     id: "starburst",
     label: "Starburst",
     logo: (
-      <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" className="client-svg">
+      <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
         <g fill="currentColor">
           <polygon points="24,2 26.5,10 24,8 21.5,10" />
           <polygon points="24,46 21.5,38 24,40 26.5,38" />
@@ -57,7 +51,7 @@ const clients = [
     id: "loqo",
     label: "LOQO",
     logo: (
-      <svg viewBox="0 0 120 40" width="120" height="40" xmlns="http://www.w3.org/2000/svg" className="client-svg">
+      <svg viewBox="0 0 120 40" width="120" height="40" xmlns="http://www.w3.org/2000/svg">
         <text x="0" y="32" fontFamily="inherit" fontWeight="700" fontSize="34" letterSpacing="-3" fill="currentColor">
           LOQO
         </text>
@@ -69,7 +63,7 @@ const clients = [
     id: "device",
     label: "Device Co",
     logo: (
-      <svg viewBox="0 0 80 48" width="80" height="48" xmlns="http://www.w3.org/2000/svg" className="client-svg">
+      <svg viewBox="0 0 80 48" width="80" height="48" xmlns="http://www.w3.org/2000/svg">
         <rect x="4" y="8" width="58" height="32" rx="4" fill="none" stroke="currentColor" strokeWidth="3" />
         <rect x="10" y="14" width="18" height="20" rx="2" fill="currentColor" />
         <rect x="34" y="14" width="18" height="20" rx="2" fill="currentColor" />
@@ -82,7 +76,7 @@ const clients = [
     id: "nexus",
     label: "Nexus",
     logo: (
-      <svg viewBox="0 0 80 48" width="80" height="48" xmlns="http://www.w3.org/2000/svg" className="client-svg">
+      <svg viewBox="0 0 80 48" width="80" height="48" xmlns="http://www.w3.org/2000/svg">
         <text x="0" y="38" fontFamily="inherit" fontWeight="700" fontSize="42" letterSpacing="-3" fill="currentColor">
           N
         </text>
@@ -94,99 +88,35 @@ const clients = [
   },
 ];
 
-const styles = {
-  section: {
-    padding: "1.5rem 0",
-    fontFamily: "inherit",
-    background: "#f5f5f5",
-  },
-  header: {
-    display: "flex",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    marginBottom: "1.25rem",
-    paddingLeft: "3rem",
-    paddingRight: "0",
-  },
-  label: {
-    display: "flex",
-    alignItems: "center",
-    gap: "8px",
-    fontSize: "14px",
-    fontWeight: 500,
-    color: "#111",
-    marginRight: "4rem",
-  },
-  plusIcon: {
-    width: "20px",
-    height: "20px",
-    borderRadius: "50%",
-    border: "1.5px solid #111",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "14px",
-    lineHeight: 1,
-    flexShrink: 0,
-  },
-  year: {
-    fontSize: "13px",
-    color: "#888",
-    marginRight: "2rem",
-  },
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
-    gap: "25px",
-    paddingLeft: "3rem",
-  },
-  card: {
-    background: "#fff",
-    border: "0.5px solid #e5e5e5",
-    borderRadius: "12px",
-    aspectRatio: "4 / 3",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "1.5rem",
-    cursor: "default",
-    transition: "border-color 0.2s",
-    color: "#111",
-  },
-  wordmark: {
-    display: "flex",
-    alignItems: "center",
-    gap: "6px",
-    fontSize: "15px",
-    fontWeight: 500,
-    color: "currentColor",
-  },
-  svg: {
-    width: "100%",
-    height: "48px",
-  },
-};
-
 const OurClients = () => {
-  const [hovered, setHovered] = React.useState(null);
+  const [hovered, setHovered] = useState(null);
 
   return (
-    <section style={styles.section}>
-      <div style={styles.header}>
-        <div style={styles.label}>
-          <div style={styles.plusIcon}>+</div>
+    <section className="py-6 bg-[#f5f5f5] font-sans">
+
+      {/* Header */}
+      <div className="flex items-center gap-16 mb-5 pl-12">
+        <div className="flex items-center gap-2 text-sm font-medium text-[#111]">
+          <div className="w-5 h-5 rounded-full border-[1.5px] border-[#111] flex items-center justify-center text-sm leading-none flex-shrink-0">
+            +
+          </div>
           Our clients
         </div>
-        <span style={styles.year}>(2016–25©)</span>
+        <span className="text-[13px] text-[#888]">(2016–25©)</span>
       </div>
 
-      <div style={styles.grid}>
+      {/* Logo Grid */}
+      <div
+        className="grid gap-4 pl-36 pr-6"
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))" }}
+      >
         {clients.map((client) => (
           <div
             key={client.id}
+            className="bg-white rounded-xl flex items-center justify-center p-6 cursor-default transition-colors duration-200 text-[#111]"
             style={{
-              ...styles.card,
-              borderColor: hovered === client.id ? "#bbb" : "#e5e5e5",
+              aspectRatio: "4 / 3",
+              border: hovered === client.id ? "0.5px solid #bbb" : "0.5px solid #e5e5e5",
             }}
             onMouseEnter={() => setHovered(client.id)}
             onMouseLeave={() => setHovered(null)}
@@ -196,6 +126,7 @@ const OurClients = () => {
           </div>
         ))}
       </div>
+
     </section>
   );
 };
