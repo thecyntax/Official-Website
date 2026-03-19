@@ -107,7 +107,7 @@ const OurClients = () => {
 
       {/* Logo Grid */}
       <div
-        className="grid gap-4 pl-36 pr-6"
+        className="grid gap-4 pl-50 pr-6"
         style={{ gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))" }}
       >
         {clients.map((client) => (
