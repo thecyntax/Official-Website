@@ -74,7 +74,7 @@ const Hero = () => {
               <span className="xl:text-[300px] font-semibold lg:text-[200px]">syntax</span>
             </h1>
 
-            <div className="flex items-center justify-between xl:my-[170px] lg:my-[150px]">
+            <div className="flex items-center justify-between xl:my-42.5 lg:my-37.5">
               <Plus className="text-[#e4e4e4]" />
               <Plus className="text-[#e4e4e4]" />
               <Plus className="text-[#e4e4e4]" />
@@ -89,15 +89,15 @@ const Hero = () => {
               <p>Growth-Driven Digital Marketing</p>
             </div>
 
-            <div className="xl:my-[170px] lg:my-[150px]">
+            <div className="xl:my-42.5 lg:my-37.5">
               <Plus className="text-[#e4e4e4]  " />
             </div>
           </div>
         </div>
 
         <div className="flex justify-between items-end">
-          <div className="xl:max-w-[600px]">
-            <p className="text-[#dddddd] xl:text-[22px] font-medium indent-10 leading-[1.1] xl:max-w-[600px] lg:max-w-[350px] ">
+          <div className="xl:max-w-150">
+            <p className="text-[#dddddd] xl:text-[22px] font-medium indent-10 leading-[1.1] xl:max-w-150 lg:max-w-87.5 ">
               No generic solutions. No empty promises.
               <span className="text-[#767676]">
                 Just powerful digital experiences that help your business grow
