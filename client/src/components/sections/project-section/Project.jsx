@@ -50,7 +50,7 @@ const Project = () => {
   ];
 
   return (
-    <section className="bg-[#f5f5f5] font-sans">
+    <section className="bg-[#f5f5f5] ">
       
       {/* SAME CONTAINER AS FOOTER */}
       <div className="px-4 py-10 md:py-12 mx-auto lg:m-10 mb-0 lg:mb-0">
