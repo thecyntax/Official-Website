@@ -44,8 +44,8 @@ const OurClients = () => {
         {/* Header */}
         <div className="flex items-center justify-between flex-wrap gap-4 mb-10">
           <div className="flex items-center gap-2 text-sm font-medium text-[#111]">
-            <div className="w-5  h-5 rounded-full border-[1.5px] border-[#111] flex items-center justify-center text-sm leading-none shrink-0 pt-px">
-              <Plus className="w-4 h-4" />
+            <div className="w-5  h-5 rounded-full border-[1.5px] bg-black flex items-center justify-center text-sm leading-none shrink-0 pt-px">
+              <Plus className="w-4 h-4 text-white" />
             </div>
             Our clients
           </div>
