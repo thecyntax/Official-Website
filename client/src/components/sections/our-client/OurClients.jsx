@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Plus } from "lucide-react";
 
 const clients = [
   {
@@ -38,22 +39,18 @@ const OurClients = () => {
 
   return (
     <section className="bg-[#f5f5f5]">
-      
       {/* SAME CONTAINER AS FOOTER */}
-      <div className="px-4 py-10 md:py-12 lg:py-16 mx-auto lg:m-10">
-
+      <div className="px-4 py-10 md:py-12 mx-auto lg:m-10 lg:pt-[80px]  ">
         {/* Header */}
-        <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
+        <div className="flex items-center justify-between flex-wrap gap-4 mb-10">
           <div className="flex items-center gap-2 text-sm font-medium text-[#111]">
-            <div className="w-5 h-5 rounded-full border-[1.5px] border-[#111] flex items-center justify-center text-sm leading-none shrink-0 pt-px">
-              +
+            <div className="w-5  h-5 rounded-full border-[1.5px] border-[#111] flex items-center justify-center text-sm leading-none shrink-0 pt-px">
+              <Plus className="w-4 h-4" />
             </div>
             Our clients
           </div>
 
-          <span className="text-[13px] text-[#888]">
-            (2016–25©)
-          </span>
+          <span className="text-[13px] text-[#888]">(2016–25©)</span>
         </div>
 
         {/* Logos Flex Container */}
@@ -72,10 +69,10 @@ const OurClients = () => {
               onMouseEnter={() => setHovered(client.id)}
               onMouseLeave={() => setHovered(null)}
             >
-              <img 
-                src={client.logo} 
-                alt={client.label} 
-                className="w-full h-auto object-contain mix-blend-multiply" 
+              <img
+                src={client.logo}
+                alt={client.label}
+                className="w-full h-auto object-contain mix-blend-multiply"
               />
             </div>
           ))}
