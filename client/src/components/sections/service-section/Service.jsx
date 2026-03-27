@@ -261,18 +261,13 @@ const Service = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-14 md:mt-18">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-              <div className="md:col-span-1 hidden md:block" />
-              <div className="md:col-span-11">
-                <button className="group inline-flex items-center gap-3 bg-white text-black font-semibold text-[15px] px-8 py-3.5 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.08)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]">
-                  Get started
-                  <span className="transition-transform duration-300 group-hover:translate-x-0.5">
-                    →
-                  </span>
-                </button>
-              </div>
-            </div>
+          <div className="mt-16 md:mt-24 flex justify-center w-full">
+            <button className="group inline-flex items-center gap-3 bg-white text-black font-semibold text-[15px] px-10 py-4 rounded-full shadow-[0_0_24px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]">
+              Get started
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </button>
           </div>
         </div>
       </section>
