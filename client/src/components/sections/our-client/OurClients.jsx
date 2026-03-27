@@ -1,81 +1,103 @@
-import React, { useState } from "react";
+import React from "react";
 import { Plus } from "lucide-react";
+import LogoLoop from "../../../animation/LogoLoop";
 
 const clients = [
   {
-    id: "logo-ipsum",
+    id: "1",
     label: "Logo Ipsum",
     logo: "https://placehold.co/200x100/ffffff/111111?text=Logo+Ipsum",
   },
   {
-    id: "warpspeed",
+    id: "2",
     label: "Warpspeed",
     logo: "https://placehold.co/200x100/ffffff/111111?text=Warpspeed",
   },
   {
-    id: "starburst",
+    id: "3",
     label: "Starburst",
     logo: "https://placehold.co/200x100/ffffff/111111?text=Starburst",
   },
   {
-    id: "loqo",
+    id: "4",
     label: "LOQO",
     logo: "https://placehold.co/200x100/ffffff/111111?text=LOQO",
   },
   {
-    id: "device",
-    label: "Device Co",
-    logo: "https://placehold.co/200x100/ffffff/111111?text=Device+Co",
+    id: "5",
+    label: "Device",
+    logo: "https://placehold.co/200x100/ffffff/111111?text=Device",
   },
   {
-    id: "nexus",
+    id: "6",
     label: "Nexus",
     logo: "https://placehold.co/200x100/ffffff/111111?text=Nexus",
   },
 ];
 
-const OurClients = () => {
-  const [hovered, setHovered] = useState(null);
+const logos = clients.map((c) => ({ src: c.logo, alt: c.label }));
 
+const OurClients = () => {
   return (
     <section className="bg-[#f5f5f5]">
-      {/* SAME CONTAINER AS FOOTER */}
-      <div className="px-4 py-10 md:py-12 mx-auto lg:m-10 lg:pt-[80px]  ">
-        {/* Header */}
-        <div className="flex items-center justify-between flex-wrap gap-4 mb-10">
-          <div className="flex items-center gap-2 text-sm font-medium text-[#111]">
-            <div className="w-5  h-5 rounded-full border-[1.5px] bg-black flex items-center justify-center text-sm leading-none shrink-0 pt-px">
-              <Plus className="w-4 h-4 text-white" />
+      <div className="px-4 mx-auto lg:m-10 h-[92vh] flex flex-col">
+        {/* 🔝 HEADER (UNCHANGED) */}
+        <div className="pt-10 md:pt-12">
+          <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-8 mb-10 lg:mb-12">
+            <div className="w-full lg:w-1/4 flex items-center gap-2.5">
+              <div className="w-5 h-5 rounded-full border border-black bg-black flex items-center justify-center">
+                <Plus className="w-4 h-4 text-white" />
+              </div>
+              <span className="text-gray-500 font-medium text-[15px]">
+                Our clients
+              </span>
             </div>
-            Our clients
-          </div>
 
-          <span className="text-[13px] text-[#888]">(2016–25©)</span>
+            <div className="w-full lg:w-2/4 flex flex-col items-start lg:items-center">
+              <h2 className="text-[18vw] lg:text-[9vw] leading-[0.85] font-bold tracking-tighter text-black">
+                Clients.
+              </h2>
+              <span className="text-2xl lg:text-[2vw] font-bold tracking-tighter text-gray-400 mt-2">
+                (2016 — {new Date().getFullYear()})
+              </span>
+            </div>
+
+            <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
+              <p className="text-gray-500 text-[14px] font-medium leading-[1.6] max-w-[260px]">
+                We collaborate with ambitious brands to create impactful digital
+                products and experiences.
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Logos Flex Container */}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-          {clients.map((client) => (
-            <div
-              key={client.id}
-              className="bg-white rounded-xl flex items-center justify-center p-6 sm:p-8 w-[calc(50%-12px)] sm:w-[calc(33.33%-16px)] md:w-[calc(33.33%-22px)] lg:w-[240px] xl:w-[260px] transition-all duration-200 cursor-default text-[#111]"
-              style={{
-                aspectRatio: "4 / 3",
-                border:
-                  hovered === client.id
-                    ? "0.5px solid #bbb"
-                    : "0.5px solid #e5e5e5",
-              }}
-              onMouseEnter={() => setHovered(client.id)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <img
-                src={client.logo}
-                alt={client.label}
-                className="w-full h-auto object-contain mix-blend-multiply"
-              />
-            </div>
-          ))}
+        {/* 🔥 CONTENT AREA */}
+        <div className="flex-1 flex flex-col justify-center gap-16 lg:gap-20 pb-10">
+          {/* 🧠 CENTER TEXT */}
+          <div className="text-center max-w-[800px] mx-auto px-4">
+            <h3 className="text-[24px] sm:text-[28px] lg:text-[36px] xl:text-[40px] font-medium text-black leading-[1.2] tracking-tight">
+              Trusted by brands that value design, performance, and clarity.
+            </h3>
+
+            <p className="text-gray-500 text-[15px] sm:text-[16px] lg:text-[18px] mt-5 lg:mt-6 leading-relaxed max-w-[550px] mx-auto">
+              From startups to growing businesses, we help teams build digital
+              products that stand out and scale confidently.
+            </p>
+          </div>
+
+          {/* 🔁 LOGO LOOP */}
+          <div className="overflow-hidden w-full">
+            <LogoLoop
+              logos={logos}
+              speed={200}
+              direction="left"
+              logoHeight={150}
+              gap={110}
+              fadeOut
+              fadeOutColor="#f5f5f5" // ✅ FIXED EDGE COLOR
+              scaleOnHover
+            />
+          </div>
         </div>
       </div>
     </section>
