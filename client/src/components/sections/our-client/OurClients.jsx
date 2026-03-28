@@ -58,7 +58,7 @@ const OurClients = () => {
                 Clients.
               </h2>
               <span className="text-2xl lg:text-[2vw] font-bold tracking-tighter text-gray-400 mt-2">
-                (2016 — {new Date().getFullYear()})
+                ({new Date().getFullYear()})
               </span>
             </div>
 
