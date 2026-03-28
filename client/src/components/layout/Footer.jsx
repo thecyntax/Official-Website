@@ -48,7 +48,7 @@ const Footer = () => {
           <SectionTwo />
         </div>
       </div>
-      <div className="bg-black py-4 sm:py-6 px-4 sm:px-6 md:px-10 w-full">
+      <div className="bg-black py-4 sm:py-6 px-4 sm:px-6 md:px-10 md:pb-[120px] pb-[120px] w-full">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
           <p className="text-[#b3b3b3] font-medium text-[12px] sm:text-[13px] md:text-[14px]">
             &copy; {new Date().getFullYear()} The Syntax. All rights reserved.
