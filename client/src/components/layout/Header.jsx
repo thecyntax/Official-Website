@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="mx-6 my-5 flex items-center justify-between md:mx-10 md:justify-start lg:justify-between md:gap-10">
       {/* 1. Logo - Always Visible */}
-      <img src={Logo} alt="The Syntax Logo" className="h-[20px] md:h-[25px]" />
+      <img src={Logo} alt="The Cyntax Logo" className="h-5 md:h-6.25" />
 
       {/* 2. Navigation Items - Hidden on mobile, Flex on desktop (md and up) */}
       <p className="hidden cursor-pointer font-semibold text-[#090909] tracking-[-0.05em] md:block whitespace-nowrap">

@@ -25,7 +25,7 @@ const reasons = [
 const WhyChooseUs = () => {
   return (
     <div className="p-2 sm:p-3 lg:p-2 w-full bg-[#f5f5f5]">
-      <section className="w-full rounded-2xl overflow-hidden text-white bg-[#070707] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1b1b1b] via-[#090909] to-[#050505] shadow-2xl">
+      <section className="w-full rounded-2xl overflow-hidden text-white bg-[#070707] bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-[#1b1b1b] via-[#090909] to-[#050505] shadow-2xl">
         <div className="px-4 py-10 md:py-12 mx-auto lg:m-10">
           {/* Header */}
           <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-8 mb-16 md:mb-24">
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
-              <p className="text-gray-400 text-[15px] font-medium leading-[1.6] max-w-[260px]">
+              <p className="text-gray-400 text-[15px] font-medium leading-[1.6] max-w-65">
                 We combine clean design, solid execution, and business-focused
                 thinking to build digital experiences that actually matter.
               </p>
@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
             {reasons.map((item) => (
               <div
                 key={item.id}
-                className="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-7 transition-all duration-300 hover:bg-white/[0.06] hover:border-white/15"
+                className="group rounded-3xl border border-white/10 bg-white/3 p-6 md:p-7 transition-all duration-300 hover:bg-white/[0.06] hover:border-white/15"
               >
                 <div className="flex items-center justify-between mb-8">
                   <span className="text-gray-500 text-sm font-medium tracking-[0.18em]">
@@ -76,14 +76,14 @@ const WhyChooseUs = () => {
                   {item.title}
                 </h3>
 
-                <p className="text-gray-400 text-[15px] sm:text-[16px] leading-[1.7] max-w-[360px]">
+                <p className="text-gray-400 text-[15px] sm:text-[16px] leading-[1.7] max-w-90">
                   {item.description}
                 </p>
 
                 <div className="mt-8 h-px w-full bg-white/10" />
 
                 <p className="mt-4 text-[12px] uppercase tracking-[0.22em] text-gray-500">
-                  The Syntax
+                  The Cyntax
                 </p>
               </div>
             ))}
@@ -91,7 +91,7 @@ const WhyChooseUs = () => {
 
           {/* Bottom CTA */}
           <div className="mt-16 md:mt-24 flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8">
-            <p className="text-gray-400 text-[15px] md:text-[16px] max-w-[620px] leading-[1.7]">
+            <p className="text-gray-400 text-[15px] md:text-[16px] max-w-155 leading-[1.7]">
               If you need a website, product experience, or marketing presence
               that feels refined and performs well, this section can help you
               position your brand with more confidence.

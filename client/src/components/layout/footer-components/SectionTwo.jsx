@@ -7,7 +7,7 @@ const SectionTwo = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-20 items-start">
         {/* first section */}
         <div>
-          <div className="py-10 md:py-16 lg:py-[100px]">
+          <div className="py-10 md:py-16 lg:py-25">
             <Plus className="text-[#767676]" />
           </div>
 
@@ -27,7 +27,7 @@ const SectionTwo = () => {
 
         {/* second section */}
         <div>
-          <div className="py-10 md:py-16 lg:py-[100px]">
+          <div className="py-10 md:py-16 lg:py-25">
             <Plus className="text-[#767676]" />
           </div>
 
@@ -54,7 +54,7 @@ const SectionTwo = () => {
 
         {/* third section */}
         <div className="md:col-span-2 lg:col-span-1">
-          <div className="py-10 md:py-16 lg:py-[100px]">
+          <div className="py-10 md:py-16 lg:py-25">
             <Plus className="text-[#767676]" />
           </div>
 
@@ -65,7 +65,7 @@ const SectionTwo = () => {
             </div>
 
             <h1 className="text-2xl md:text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl font-medium underline whitespace-nowrap">
-              thesyntax.company@gmail.com
+              theCyntax.company@gmail.com
             </h1>
           </div>
         </div>
