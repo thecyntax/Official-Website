@@ -50,80 +50,84 @@ const Project = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-[#f5f5f5] py-20 px-6 md:px-12 flex flex-col font-sans">
-
-      {/* Middle Section: Typography Layout */}
-      <div className="w-full max-w-400 mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12 lg:gap-0 mb-20 md:mb-32">
-        <div className="w-full lg:w-1/4">
-          <span className="text-gray-500 font-medium text-[15px]">
-            (27)
-          </span>
-        </div>
-
-        <div className="w-full lg:w-2/4 flex flex-col items-start lg:items-center">
-          <div className="flex flex-col items-start">
-            <h2 className="text-[18vw] lg:text-[11vw] leading-[0.85] font-bold tracking-tighter text-black">
-              Projects.
-            </h2>
-            <span className="text-3xl lg:text-[2.5vw] font-bold tracking-tighter text-black mt-2 lg:mt-4">
-              ©2025
+    <section className="bg-[#f5f5f5] ">
+      
+      {/* SAME CONTAINER AS FOOTER */}
+      <div className="px-4 py-10 md:py-12 mx-auto lg:m-10 mb-0 lg:mb-0">
+        
+        {/* Middle Section: Typography Layout */}
+        <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12 lg:gap-0 mb-20 md:mb-32">
+          <div className="w-full lg:w-1/4">
+            <span className="text-gray-500 font-medium text-[15px]">
+              (27)
             </span>
+          </div>
+
+          <div className="w-full lg:w-2/4 flex flex-col items-start lg:items-center">
+            <div className="flex flex-col items-start">
+              <h2 className="text-[18vw] lg:text-[11vw] leading-[0.85] font-bold tracking-tighter text-black">
+                Projects.
+              </h2>
+              <span className="text-3xl lg:text-[2.5vw] font-bold tracking-tighter text-black mt-2 lg:mt-4">
+                ©2025
+              </span>
+            </div>
+          </div>
+
+          <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
+            <p className="text-gray-500 text-[15px] font-medium leading-[1.6] max-w-[260px]">
+              We've helped businesses across industries achieve their goals. Here are some of our recent projects.
+            </p>
           </div>
         </div>
 
-        <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
-          <p className="text-gray-500 text-[15px] font-medium leading-[1.6] max-w-65">
-            We've helped businesses across industries achieve their goals. Here are some of our recent projects.
-          </p>
-        </div>
-      </div>
+        {/* Bottom Section: Portfolio Cards */}
+        <div className="w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-12">
+            {portfolioCards.map((card) => (
+              <div key={card.id} className="flex flex-col gap-3 group">
 
-      {/* Bottom Section: Portfolio Cards */}
-      <div className="w-full max-w-400 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-12">
-          {portfolioCards.map((card) => (
-            <div key={card.id} className="flex flex-col gap-3 group">
-
-              {/* Card Header Label */}
-              <div className="bg-white rounded-[20px] px-6 py-4.5 flex justify-between items-center transition-transform group-hover:-translate-y-1">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-bold text-lg tracking-tight text-black">{card.title}</span>
-                  <span className="text-gray-400 text-xs font-medium">{card.year}</span>
-                </div>
-
-                {/* Dots indicator */}
-                <div className="flex gap-1.5">
-                  <div className={`w-2 h-2 rounded-full ${card.coloredDots ? 'bg-[#ff5f56]' : 'bg-gray-200'}`}></div>
-                  <div className={`w-2 h-2 rounded-full ${card.coloredDots ? 'bg-[#ffbd2e]' : 'bg-gray-200'}`}></div>
-                  <div className={`w-2 h-2 rounded-full ${card.coloredDots ? 'bg-[#27c93f]' : 'bg-gray-200'}`}></div>
-                </div>
-              </div>
-
-              {/* Card Image Wrapper */}
-              <div className="relative w-full aspect-16/11 md:aspect-4/3 rounded-3xl overflow-hidden cursor-pointer shadow-sm">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-
-                {/* Optional dark overlay for better logo contrast */}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500"></div>
-
-                {/* Center Brand Overlay */}
-                {card.brandName && (
-                  <div className="absolute inset-0 flex items-center justify-center gap-3 text-white z-10">
-                    {card.logo}
-                    <span className="font-bold text-2xl md:text-3xl tracking-tight mt-1">{card.brandName}</span>
+                {/* Card Header Label */}
+                <div className="bg-white rounded-[20px] px-6 py-4.5 flex justify-between items-center transition-transform group-hover:-translate-y-1">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-bold text-lg tracking-tight text-black">{card.title}</span>
+                    <span className="text-gray-400 text-xs font-medium">{card.year}</span>
                   </div>
-                )}
+
+                  {/* Dots indicator */}
+                  <div className="flex gap-1.5">
+                    <div className={`w-2 h-2 rounded-full ${card.coloredDots ? 'bg-[#ff5f56]' : 'bg-gray-200'}`}></div>
+                    <div className={`w-2 h-2 rounded-full ${card.coloredDots ? 'bg-[#ffbd2e]' : 'bg-gray-200'}`}></div>
+                    <div className={`w-2 h-2 rounded-full ${card.coloredDots ? 'bg-[#27c93f]' : 'bg-gray-200'}`}></div>
+                  </div>
+                </div>
+
+                {/* Card Image Wrapper */}
+                <div className="relative w-full aspect-16/11 md:aspect-4/3 rounded-3xl overflow-hidden cursor-pointer shadow-sm">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+
+                  {/* Optional dark overlay for better logo contrast */}
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500"></div>
+
+                  {/* Center Brand Overlay */}
+                  {card.brandName && (
+                    <div className="absolute inset-0 flex items-center justify-center gap-3 text-white z-10">
+                      {card.logo}
+                      <span className="font-bold text-2xl md:text-3xl tracking-tight mt-1">{card.brandName}</span>
+                    </div>
+                  )}
+                </div>
+
               </div>
-
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        
       </div>
-
     </section>
   );
 };
