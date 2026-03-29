@@ -99,7 +99,7 @@ const Hero = () => {
                 </span>
 
                 <span className="text-[140px] lg:text-[180px] xl:text-[240px] font-bold">
-                  Cyntax.
+                  Syntax.
                 </span>
               </h1>
 
