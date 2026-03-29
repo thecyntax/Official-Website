@@ -95,11 +95,11 @@ const Hero = () => {
             <div>
               <h1 className="flex flex-col tracking-tight leading-[0.78]">
                 <span className="text-[48px] xl:text-[70px] font-medium text-white/70 ml-2">
-                  craft the
+                  Craft the
                 </span>
 
                 <span className="text-[140px] lg:text-[180px] xl:text-[240px] font-bold">
-                  Cyntax.
+                  Syntax.
                 </span>
               </h1>
 
