@@ -116,7 +116,7 @@ const HeroMobile = () => {
                   Craft the
                 </span>
                 <span className="text-[18vw] sm:text-[16vw] font-bold">
-                  Cyntax.
+                  Syntax.
                 </span>
               </h1>
 

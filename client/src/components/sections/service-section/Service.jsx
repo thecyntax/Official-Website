@@ -194,7 +194,9 @@ const Service = () => {
                               <motion.img
                                 src={service.image}
                                 alt={service.title}
-                                className="w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                className="w-full h-full object-cover will-change-transform"
                                 initial={{ scale: 1.04 }}
                                 animate={{ scale: 1 }}
                                 transition={{
