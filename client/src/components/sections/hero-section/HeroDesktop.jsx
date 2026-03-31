@@ -73,11 +73,11 @@ const Hero = () => {
           {/* RIGHT */}
           <div className="col-span-5 flex flex-col justify-between">
             {/* services */}
-            <div className="flex flex-col items-end text-right gap-3 text-[14px] font-medium text-white/80">
-              <p>UI/UX Systems</p>
-              <p>Web Development</p>
-              <p>Brand Identity</p>
-              <p className="text-white/40">Marketing</p>
+            <div className="flex flex-col items-end text-right gap-3 text-[14px] font-light text-white/80 leading-[0.5] ">
+              <p className="text-white/80">&lt;full-stack.dev /&gt;</p>
+              <p className="text-white/80">&lt;app.build /&gt;</p>
+              <p className="text-white/80">&lt;ui-ux.design /&gt;</p>
+              <p className="text-white/40">&lt;growth.marketing /&gt;</p>
             </div>
 
             {/* glass card */}
