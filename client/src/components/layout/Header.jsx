@@ -4,7 +4,12 @@ import Logo from "../../assets/images/logo/theCyntax-Logo.png";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const menuItems = ["Home", "Projects", "Why Choose Us", "Services"];
+  const menuItems = [
+    { name: "Home", id: "home" },
+    { name: "Projects", id: "projects" },
+    { name: "Why Choose Us", id: "why-choose-us" },
+    { name: "Services", id: "services" },
+  ];
 
   return (
     <div className="relative">
@@ -15,8 +20,9 @@ const Header = () => {
 
         {/* Desktop Nav */}
         {menuItems.map((item) => (
-          <p
-            key={item}
+          <a
+            key={item.name}
+            href={`#${item.id}`}
             className={`hidden md:block whitespace-nowrap cursor-pointer font-semibold text-[#090909] tracking-[-0.03em]
             transition-opacity duration-300 ease-in-out
             ${
@@ -25,8 +31,8 @@ const Header = () => {
                 : "opacity-100 delay-150"
             }`}
           >
-            {item}
-          </p>
+            {item.name}
+          </a>
         ))}
 
         {/* Hamburger */}
@@ -59,9 +65,11 @@ const Header = () => {
           {/* CENTER MENU */}
           <div className="flex flex-1 flex-col items-center justify-center gap-2">
             {menuItems.map((item) => (
-              <div
-                key={item}
-                className="relative overflow-hidden cursor-pointer group px-2"
+              <a
+                key={item.name}
+                href={`#${item.id}`}
+                onClick={() => setMenuOpen(false)}
+                className="relative overflow-hidden cursor-pointer group px-2 block"
               >
                 {/* ORIGINAL TEXT */}
                 <p
@@ -70,7 +78,7 @@ const Header = () => {
                   transition-transform duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
                   group-hover:-translate-y-full"
                 >
-                  {item}
+                  {item.name}
                 </p>
 
                 {/* HOVER TEXT */}
@@ -79,11 +87,11 @@ const Header = () => {
                   translate-y-full
                   transform-gpu will-change-transform
                   transition-transform duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
-                  group-hover:translate-y-0"
+                  group-hover:translate-y-0 px-2"
                 >
-                  {item}
+                  {item.name}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
 
