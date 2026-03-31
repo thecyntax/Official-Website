@@ -17,7 +17,7 @@ const Card = () => {
       hover:shadow-2xl transition-all duration-500"
     >
       {/* Lottie */}
-      <div className="group-hover/card:-translate-y-2 transition-transform duration-500 ease-in-out flex-shrink-0">
+      <div className="group-hover/card:-translate-y-2 transition-transform duration-500 ease-in-out shrink-0">
         <Lottie
           animationData={JsonAnimation}
           loop

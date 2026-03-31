@@ -75,7 +75,7 @@ const Header = () => {
                 <p
                   className="text-[50px] font-bold leading-[1.1] tracking-[-0.03em] text-[#090909]
                   transform-gpu will-change-transform
-                  transition-transform duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
+                  transition-transform duration-200 ease-in-out
                   group-hover:-translate-y-full"
                 >
                   {item.name}
@@ -86,7 +86,7 @@ const Header = () => {
                   className="absolute left-0 top-0 text-[50px] font-bold leading-[1.1] tracking-[-0.03em] text-[#090909]
                   translate-y-full
                   transform-gpu will-change-transform
-                  transition-transform duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
+                  transition-transform duration-200 ease-in-out
                   group-hover:translate-y-0 px-2"
                 >
                   {item.name}

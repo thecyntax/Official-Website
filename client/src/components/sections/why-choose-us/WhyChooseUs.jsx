@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
             {reasons.map((item) => (
               <div
                 key={item.id}
-                className="group rounded-3xl border border-white/10 bg-white/3 p-6 md:p-7 transition-all duration-300 hover:bg-white/[0.06] hover:border-white/15"
+                className="group rounded-3xl border border-white/10 bg-white/3 p-6 md:p-7 transition-all duration-300 hover:bg-white/6 hover:border-white/15"
               >
                 <div className="flex items-center justify-between mb-8">
                   <span className="text-gray-500 text-sm font-medium tracking-[0.18em]">

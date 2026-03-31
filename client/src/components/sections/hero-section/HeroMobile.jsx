@@ -146,7 +146,7 @@ const HeroMobile = () => {
 
           {/* bottom */}
           <div className="flex flex-col gap-4 sm:gap-5 pb-1">
-            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-4 sm:p-5 backdrop-blur-sm">
+            <div className="rounded-3xl border border-white/10 bg-white/3 p-4 sm:p-5 backdrop-blur-sm">
               <p className="text-[15px] sm:text-[16px] font-medium leading-[1.35] text-white/90">
                 No templates. No noise.
               </p>
