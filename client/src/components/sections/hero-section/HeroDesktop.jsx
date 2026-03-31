@@ -13,7 +13,7 @@
 //                 the
 //               </span>
 //               <span className="xl:text-[300px] font-bold lg:text-[200px] leading-[0.85]">
-//                 syntax.
+//                 Cyntax.
 //               </span>
 //             </h1>
 
@@ -51,7 +51,7 @@
 
 //           <div className="text-white flex justify-between gap-10 items-end">
 //             <p className="xl:text-[14px] lg:text-[12px] ">
-//               © {new Date().getFullYear()} the syntax.
+//               © {new Date().getFullYear()} the Cyntax.
 //             </p>
 //             <div>
 //               <Card />
@@ -88,18 +88,18 @@ const Hero = () => {
             {/* top label */}
             <div className="flex items-center gap-2 text-white/70 text-[12px] tracking-[0.25em] uppercase">
               <Plus className="w-4 h-4" />
-              The Syntax
+              The Cyntax
             </div>
 
             {/* main text */}
             <div>
               <h1 className="flex flex-col tracking-tight leading-[0.78]">
                 <span className="text-[48px] xl:text-[70px] font-medium text-white/70 ml-2">
-                  craft the
+                  Craft the
                 </span>
 
                 <span className="text-[140px] lg:text-[180px] xl:text-[240px] font-bold">
-                  syntax.
+                  Syntax.
                 </span>
               </h1>
 
@@ -111,7 +111,7 @@ const Hero = () => {
             </div>
 
             {/* bottom text */}
-            <p className="text-[18px] xl:text-[20px] font-medium leading-[1.2] text-white/90 max-w-[500px]">
+            <p className="text-[18px] xl:text-[20px] font-medium leading-[1.2] text-white/90 max-w-125">
               No generic solutions.
               <span className="text-white/40">
                 {" "}Just powerful digital experiences that help your business grow.
@@ -132,7 +132,7 @@ const Hero = () => {
 
             {/* center glass panel */}
             <div className="flex justify-end">
-              <div className="w-full max-w-[360px] rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-6">
+              <div className="w-full max-w-90 rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-6">
 
                 <p className="text-[16px] font-medium text-white/90 leading-[1.4]">
                   No templates. No noise.

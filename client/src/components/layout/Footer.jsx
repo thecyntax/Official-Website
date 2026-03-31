@@ -48,10 +48,10 @@ const Footer = () => {
           <SectionTwo />
         </div>
       </div>
-      <div className="bg-black py-4 sm:py-6 px-4 sm:px-6 md:px-10 md:pb-[120px] pb-[120px] w-full">
+      <div className="bg-black py-4 sm:py-6 px-4 sm:px-6 md:px-10 md:pb-30 pb-30 w-full">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
           <p className="text-[#b3b3b3] font-medium text-[12px] sm:text-[13px] md:text-[14px]">
-            &copy; {new Date().getFullYear()} The Syntax. All rights reserved.
+            &copy; {new Date().getFullYear()} The Cyntax. All rights reserved.
           </p>
           <div className="flex items-center gap-4 sm:gap-6 text-gray-400 text-[12px] sm:text-[13px] md:text-[14px] font-medium">
             <p className="hover:text-white cursor-pointer transition-colors">Privacy Policy</p>

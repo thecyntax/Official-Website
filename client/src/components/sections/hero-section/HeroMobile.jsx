@@ -16,7 +16,7 @@
 //             </span>
 
 //             <span className="text-[22vw] sm:text-[16vw] font-bold bg-clip-text ">
-//               syntax.
+//               Cyntax.
 //             </span>
 //           </h1>
 
@@ -65,7 +65,7 @@
 
 //           {/* Footer */}
 //           <div className="flex justify-between items-center text-xs sm:text-sm text-zinc-500 uppercase tracking-widest border-t border-white/10 pt-6">
-//             <p>© {new Date().getFullYear()} the syntax.</p>
+//             <p>© {new Date().getFullYear()} the Cyntax.</p>
 //             <Plus size={16} className="text-zinc-400 animate-pulse" />
 //           </div>
 //         </div>
@@ -95,7 +95,7 @@ const HeroMobile = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-white/70 text-[11px] tracking-[0.24em] uppercase">
               <Plus className="w-4 h-4" />
-              The Syntax
+              The Cyntax
             </div>
 
             <div className="flex items-center gap-2 text-white/45">
@@ -116,7 +116,7 @@ const HeroMobile = () => {
                   craft the
                 </span>
                 <span className="text-[18vw] sm:text-[16vw] font-bold">
-                  syntax.
+                  Cyntax.
                 </span>
               </h1>
 
@@ -161,7 +161,7 @@ const HeroMobile = () => {
               </div>
 
               <div className="flex items-center justify-between text-[11px] sm:text-[12px] text-white/40 uppercase tracking-[0.22em] border-t border-white/10 pt-4">
-                <p>© {new Date().getFullYear()} the syntax.</p>
+                <p>© {new Date().getFullYear()} the Cyntax.</p>
                 <Plus className="w-4 h-4 text-white/50" />
               </div>
             </div>
