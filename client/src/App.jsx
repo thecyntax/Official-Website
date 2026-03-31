@@ -12,12 +12,12 @@ const App = () => {
         position="bottom"
         height="8rem"
         strength={1.5}
-        divCount={14}
+        divCount={3}
         curve="bezier"
         opacity={0.8}
         zIndex={50}
         grain
-        grainOpacity={0.12}
+        grainOpacity={0.06}
         grainSize="3px"
         className="pointer-events-none"
       />

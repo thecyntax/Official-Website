@@ -107,7 +107,9 @@ const Project = () => {
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
                   />
 
                   {/* Optional dark overlay for better logo contrast */}
