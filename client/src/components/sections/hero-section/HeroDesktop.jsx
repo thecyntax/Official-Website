@@ -1,90 +1,29 @@
-// import React from "react";
-// import { Plus } from "lucide-react";
-// import Card from "./Card";
-
-// const Hero = () => {
-//   return (
-//     <div className="m-2 mt-0 hidden lg:block">
-//       <div className="hero-section-bg min-h-[60vh] xl:h-[92.2vh] rounded-2xl xl:p-15 w-full flex flex-col justify-center  lg:h-[92vh] lg:p-10 ">
-//         <div className="text-white flex items-end justify-between">
-//           <div>
-//             <h1 className="flex flex-col tracking-tighter text-white leading-[0.1]">
-//               <span className="xl:text-[60px] font-medium ml-3 lg:text-[40px] lg:-mb-8 xl:-mb-12">
-//                 the
-//               </span>
-//               <span className="xl:text-[300px] font-bold lg:text-[200px] leading-[0.85]">
-//                 Cyntax.
-//               </span>
-//             </h1>
-
-//             <div className="flex items-center justify-between xl:my-42.5 lg:my-37.5">
-//               <Plus className="text-[#e4e4e4]" />
-//               <Plus className="text-[#e4e4e4]" /> 
-//               <Plus className="text-[#e4e4e4]" />
-//             </div>
-//           </div>
-
-//           <div>
-//             <div className="font-bold xl:text-[17px] flex flex-col gap-2">
-//               <p>Intuitive UI/UX Design</p>
-//               <p>Cross-Platform Mobile Apps</p>
-//               <p>Full-Stack Digital Platforms</p>
-//               <p>Growth-Driven Digital Marketing</p>
-//             </div>
-
-//             <div className="xl:my-42.5 lg:my-37.5">
-//               <Plus className="text-[#e4e4e4]  " />
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="flex justify-between items-end">
-//           <div className="xl:max-w-150">
-//             <p className="text-[#dddddd] xl:text-[22px] font-medium indent-10 leading-[1.1] xl:max-w-150 lg:max-w-87.5 ">
-//               No generic solutions. No empty promises.
-//               <span className="text-[#767676]">
-//                 Just powerful digital experiences that help your business grow
-//                 and your brand stand out.
-//               </span>
-//             </p>
-//           </div>
-
-//           <div className="text-white flex justify-between gap-10 items-end">
-//             <p className="xl:text-[14px] lg:text-[12px] ">
-//               © {new Date().getFullYear()} the Cyntax.
-//             </p>
-//             <div>
-//               <Card />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Hero;
-
-
 import React from "react";
 import { Plus } from "lucide-react";
 import Card from "./Card";
+import HeroVideo from "../../../assets/videos/HeroVideo.mp4";
 
 const Hero = () => {
   return (
     <div className="m-2 mt-0 hidden lg:block">
       <section className="relative h-[92vh] overflow-hidden rounded-2xl bg-[#070707] text-white">
-
         {/* 🌌 Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.05),transparent_40%)]" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 "
+        >
+          <source src={HeroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.05),transparent_40%)] pointer-events-none" />
 
         {/* 🧱 MAIN GRID */}
         <div className="relative z-10 h-full grid grid-cols-12 px-10 xl:px-16 py-10 gap-6">
-
           {/* LEFT BIG TYPO */}
           <div className="col-span-7 flex flex-col justify-between">
-
             {/* top label */}
             <div className="flex items-center gap-2 text-white/70 text-[12px] tracking-[0.25em] uppercase">
               <Plus className="w-4 h-4" />
@@ -114,14 +53,14 @@ const Hero = () => {
             <p className="text-[18px] xl:text-[20px] font-medium leading-[1.2] text-white/90 max-w-125">
               No generic solutions.
               <span className="text-white/40">
-                {" "}Just powerful digital experiences that help your business grow.
+                {" "}
+                Just powerful digital experiences that help your business grow.
               </span>
             </p>
           </div>
 
           {/* RIGHT PANEL */}
           <div className="col-span-5 flex flex-col justify-between">
-
             {/* top services */}
             <div className="flex flex-col items-end text-right gap-3 text-[14px] font-medium text-white/80">
               <p>UI/UX Systems</p>
@@ -133,7 +72,6 @@ const Hero = () => {
             {/* center glass panel */}
             <div className="flex justify-end">
               <div className="w-full max-w-90 rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-6">
-
                 <p className="text-[16px] font-medium text-white/90 leading-[1.4]">
                   No templates. No noise.
                 </p>
@@ -153,13 +91,11 @@ const Hero = () => {
                     Scalable
                   </span>
                 </div>
-
               </div>
             </div>
 
             {/* bottom */}
             <div className="flex items-end justify-between gap-6">
-
               <p className="text-[12px] text-white/40">
                 © {new Date().getFullYear()}
               </p>
@@ -167,9 +103,7 @@ const Hero = () => {
               <div className="scale-[0.9] origin-bottom-right">
                 <Card />
               </div>
-
             </div>
-
           </div>
         </div>
 
