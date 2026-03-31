@@ -1,4 +1,3 @@
-import React from "react";
 import { Plus } from "lucide-react";
 import LogoLoop from "../../../animation/LogoLoop";
 
@@ -63,7 +62,7 @@ const OurClients = () => {
             </div>
 
             <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
-              <p className="text-gray-500 text-[14px] font-medium leading-[1.6] max-w-[260px]">
+              <p className="text-gray-500 text-[14px] font-medium leading-[1.6] max-w-65">
                 We collaborate with ambitious brands to create impactful digital
                 products and experiences.
               </p>
@@ -74,12 +73,12 @@ const OurClients = () => {
         {/* 🔥 CONTENT AREA */}
         <div className="flex-1 flex flex-col justify-center gap-16 lg:gap-20 pb-10">
           {/* 🧠 CENTER TEXT */}
-          <div className="text-center max-w-[800px] mx-auto px-4">
+          <div className="text-center max-w-200 mx-auto px-4">
             <h3 className="text-[24px] sm:text-[28px] lg:text-[36px] xl:text-[40px] font-medium text-black leading-[1.2] tracking-tight">
               Trusted by brands that value design, performance, and clarity.
             </h3>
 
-            <p className="text-gray-500 text-[15px] sm:text-[16px] lg:text-[18px] mt-5 lg:mt-6 leading-relaxed max-w-[550px] mx-auto">
+            <p className="text-gray-500 text-[15px] sm:text-[16px] lg:text-[18px] mt-5 lg:mt-6 leading-relaxed max-w-137.5 mx-auto">
               From startups to growing businesses, we help teams build digital
               products that stand out and scale confidently.
             </p>
@@ -94,7 +93,7 @@ const OurClients = () => {
               logoHeight={150}
               gap={110}
               fadeOut
-              fadeOutColor="#f5f5f5" // ✅ FIXED EDGE COLOR
+              fadeOutColor="#f5f5f5"
               scaleOnHover
             />
           </div>
