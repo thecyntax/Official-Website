@@ -50,7 +50,7 @@ const Project = () => {
   ];
 
   return (
-    <section className="bg-[#f5f5f5] ">
+    <section id="projects" className="bg-[#f5f5f5] ">
       
       {/* SAME CONTAINER AS FOOTER */}
       <div className="px-4 py-10 md:py-12 mx-auto lg:m-10 mb-0 lg:mb-0">
@@ -107,7 +107,9 @@ const Project = () => {
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
                   />
 
                   {/* Optional dark overlay for better logo contrast */}

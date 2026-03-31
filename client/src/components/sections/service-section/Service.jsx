@@ -74,7 +74,7 @@ const Service = () => {
   };
 
   return (
-    <div className="p-2 sm:p-3 lg:p-2 w-full bg-[#f5f5f5]">
+    <div id="services" className="p-2 sm:p-3 lg:p-2 w-full bg-[#f5f5f5]">
       <section className="w-full rounded-2xl overflow-hidden text-white  bg-[#070707] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1b1b1b] via-[#090909] to-[#050505] shadow-2xl">
         <div className="px-4 py-10 md:py-12 mx-auto lg:m-10">
           {/* Header */}
@@ -194,7 +194,9 @@ const Service = () => {
                               <motion.img
                                 src={service.image}
                                 alt={service.title}
-                                className="w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
+                                className="w-full h-full object-cover will-change-transform"
                                 initial={{ scale: 1.04 }}
                                 animate={{ scale: 1 }}
                                 transition={{

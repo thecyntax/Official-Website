@@ -17,10 +17,10 @@ const SectionTwo = () => {
             </p>
 
             <div className="text-xl md:text-2xl font-medium flex flex-col gap-2">
-              <p>Home</p>
-              <p>Projects</p>
-              <p>Why Choose Us</p>
-              <p>Services</p>
+              <a href="#home">Home</a>
+              <a href="#projects">Projects</a>
+              <a href="#why-choose-us">Why Choose Us</a>
+              <a href="#services">Services</a>
             </div>
           </div>
         </div>
@@ -39,6 +39,10 @@ const SectionTwo = () => {
             <div className="text-xl md:text-2xl font-medium flex flex-col gap-2">
               <p className="flex items-center gap-2">
                 Linked In <ArrowUpRight className="text-[#767676]" />
+              </p>
+
+              <p className="flex items-center gap-2">
+                GitHub <ArrowUpRight className="text-[#767676]" />
               </p>
 
               <p className="flex items-center gap-2">
@@ -65,7 +69,7 @@ const SectionTwo = () => {
             </div>
 
             <h1 className="text-2xl md:text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl font-medium underline whitespace-nowrap">
-              theCyntax.company@gmail.com
+            thecyntax.company@gmail.com
             </h1>
           </div>
         </div>

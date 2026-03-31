@@ -88,7 +88,7 @@ const HeroMobile = () => {
         {/* background layers */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_38%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.05),transparent_35%)]" />
-        <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,rgba(255,255,255,0.14)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.14)_1px,transparent_1px)] bg-[size:42px_42px]" />
+        <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,rgba(255,255,255,0.14)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.14)_1px,transparent_1px)] bg-size-[42px_42px]" />
 
         <div className="relative z-10 h-full px-5 sm:px-8 py-5 sm:py-7 flex flex-col">
           {/* top */}
@@ -113,10 +113,10 @@ const HeroMobile = () => {
 
               <h1 className="flex flex-col tracking-tighter leading-[0.82]">
                 <span className="text-[34px] sm:text-[40px] font-medium text-white/70 ml-1">
-                  craft the
+                  Craft the
                 </span>
                 <span className="text-[18vw] sm:text-[16vw] font-bold">
-                  Cyntax.
+                  Syntax.
                 </span>
               </h1>
 
