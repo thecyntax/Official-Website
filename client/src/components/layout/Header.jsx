@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/images/logo/The-Syntax-Logo.png";
+import Logo from "../../assets/images/logo/theCyntax-Logo.png";
 
 const Header = () => {
   return (
