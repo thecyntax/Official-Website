@@ -134,7 +134,7 @@ const OurClients = () => {
               scaleOnHover
               //Curve
               renderItem={(logo, index) => (
-                <div className="h-[150px] w-auto aspect-[2/1] rounded-[1.5rem] overflow-hidden bg-white shadow-sm flex items-center justify-center p-4">
+                <div className="h-[150px] w-auto aspect-2/1 rounded-3xl overflow-hidden bg-white shadow-sm flex items-center justify-center p-4">
                   <img src={logo.src} alt={logo.alt} className="w-full h-full object-contain pointer-events-none" />
                 </div>
               )}

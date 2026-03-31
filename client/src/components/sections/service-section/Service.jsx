@@ -75,7 +75,7 @@ const Service = () => {
 
   return (
     <div id="services" className="p-2 sm:p-3 lg:p-2 w-full bg-[#f5f5f5]">
-      <section className="w-full rounded-2xl overflow-hidden text-white  bg-[#070707] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1b1b1b] via-[#090909] to-[#050505] shadow-2xl">
+      <section className="w-full rounded-2xl overflow-hidden text-white  bg-[#070707] bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-[#1b1b1b] via-[#090909] to-[#050505] shadow-2xl">
         <div className="px-4 py-10 md:py-12 mx-auto lg:m-10">
           {/* Header */}
           <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-8 mb-16 md:mb-24">
@@ -119,8 +119,8 @@ const Service = () => {
                   }}
                   className={`group relative overflow-hidden rounded-3xl border ${
                     isExpanded
-                      ? "border-white/15 bg-white/[0.04] shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
-                      : "border-white/10 bg-white/[0.02] hover:bg-white/[0.04]"
+                      ? "border-white/15 bg-white/4 shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+                      : "border-white/10 bg-white/2 hover:bg-white/4"
                   }`}
                 >
                   {/* subtle glow */}
@@ -204,7 +204,7 @@ const Service = () => {
                                   ease: [0.22, 1, 0.36, 1],
                                 }}
                               />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                              <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent" />
 
                               <motion.div
                                 initial={{
