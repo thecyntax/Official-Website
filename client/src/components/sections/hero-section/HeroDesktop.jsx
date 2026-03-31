@@ -43,12 +43,12 @@ const Hero = () => {
 
             {/* main text */}
             <div>
-              <h1 className="flex flex-col tracking-tight leading-[0.78]">
-                <span className="text-[48px] xl:text-[70px] font-medium text-white/70 ml-2">
+              <h1 className="flex flex-col  leading-[0.78]">
+                <span className="text-[48px] xl:text-[70px] tracking-tight font-medium text-white/70 ml-2">
                   Craft the
                 </span>
 
-                <span className="text-[140px] lg:text-[180px] xl:text-[240px] font-bold">
+                <span className="text-[140px] tracking-tighter lg:text-[180px] xl:text-[240px] font-bold">
                   Syntax.
                 </span>
               </h1>
@@ -64,7 +64,6 @@ const Hero = () => {
             <p className="text-[18px] xl:text-[20px] font-medium leading-[1.2] text-white/90 max-w-125">
               No generic solutions.
               <span className="text-white/40">
-                {" "}
                 Just powerful digital experiences that help your business grow.
               </span>
             </p>
