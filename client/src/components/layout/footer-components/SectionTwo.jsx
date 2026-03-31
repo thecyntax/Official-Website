@@ -65,7 +65,7 @@ const SectionTwo = () => {
             </div>
 
             <h1 className="text-2xl md:text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl font-medium underline whitespace-nowrap">
-              theCyntax.company@gmail.com
+            thecyntax.company@gmail.com
             </h1>
           </div>
         </div>
