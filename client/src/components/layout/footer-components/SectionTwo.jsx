@@ -42,6 +42,10 @@ const SectionTwo = () => {
               </p>
 
               <p className="flex items-center gap-2">
+                GitHub <ArrowUpRight className="text-[#767676]" />
+              </p>
+
+              <p className="flex items-center gap-2">
                 Contact Us <ArrowUpRight className="text-[#767676]" />
               </p>
 
