@@ -17,10 +17,10 @@ const SectionTwo = () => {
             </p>
 
             <div className="text-xl md:text-2xl font-medium flex flex-col gap-2">
-              <p>Home</p>
-              <p>Projects</p>
-              <p>Why Choose Us</p>
-              <p>Services</p>
+              <a href="#home">Home</a>
+              <a href="#projects">Projects</a>
+              <a href="#why-choose-us">Why Choose Us</a>
+              <a href="#services">Services</a>
             </div>
           </div>
         </div>

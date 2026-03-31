@@ -4,10 +4,10 @@ import HeroMobile from "./HeroMobile";
 
 const Hero = () => {
   return (
-    <>
+    <div id="home">
       <HeroDesktop />
       <HeroMobile />
-    </>
+    </div>
   );
 };
 
