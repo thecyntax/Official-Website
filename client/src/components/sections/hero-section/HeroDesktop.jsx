@@ -2,27 +2,38 @@ import React from "react";
 import { Plus } from "lucide-react";
 import Card from "./Card";
 import HeroVideo from "../../../assets/videos/HeroVideo.mp4";
+import GrainEffect from "../../../animation/GrainEffect";
 
 const Hero = () => {
   return (
     <div className="m-2 mt-0 hidden lg:block">
       <section className="relative h-[92vh] overflow-hidden rounded-2xl bg-[#070707] text-white">
-        {/* 🌌 Background */}
+        {/* 🎥 Background Video */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 "
+          className="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src={HeroVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.05),transparent_40%)] pointer-events-none" />
+
+        {/* 🌑 Dark Overlay (for contrast + readability) */}
+        <div className="absolute inset-0 bg-black/30 z-[1]" />
+
+        {/* 🎞 Grain Effect */}
+        <div className="absolute inset-0 w-full h-full z-[2] mix-blend-screen opacity-50 pointer-events-none">
+          <GrainEffect />
+        </div>
+
+        {/* ✨ Light Gradients */}
+        <div className="absolute inset-0 z-[3] bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%)] pointer-events-none" />
+        <div className="absolute inset-0 z-[3] bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.05),transparent_40%)] pointer-events-none" />
 
         {/* 🧱 MAIN GRID */}
         <div className="relative z-10 h-full grid grid-cols-12 px-10 xl:px-16 py-10 gap-6">
-          {/* LEFT BIG TYPO */}
+          {/* LEFT */}
           <div className="col-span-7 flex flex-col justify-between">
             {/* top label */}
             <div className="flex items-center gap-2 text-white/70 text-[12px] tracking-[0.25em] uppercase">
@@ -59,9 +70,9 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* RIGHT PANEL */}
+          {/* RIGHT */}
           <div className="col-span-5 flex flex-col justify-between">
-            {/* top services */}
+            {/* services */}
             <div className="flex flex-col items-end text-right gap-3 text-[14px] font-medium text-white/80">
               <p>UI/UX Systems</p>
               <p>Web Development</p>
@@ -69,7 +80,7 @@ const Hero = () => {
               <p className="text-white/40">Marketing</p>
             </div>
 
-            {/* center glass panel */}
+            {/* glass card */}
             <div className="flex justify-end">
               <div className="w-full max-w-90 rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-6">
                 <p className="text-[16px] font-medium text-white/90 leading-[1.4]">
