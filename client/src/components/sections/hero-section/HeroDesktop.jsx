@@ -1,23 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Plus } from "lucide-react";
 import Card from "./Card";
 import HeroVideo from "../../../assets/videos/HeroVideo.mp4";
+import HeroBgImg from "../../../assets/images/hero-images/hero-bg-img.png";
 import GrainEffect from "../../../animation/GrainEffect";
 
 const Hero = () => {
+  const [videoError, setVideoError] = useState(false);
+  const [mediaLoaded, setMediaLoaded] = useState(false);
+
   return (
     <div className="m-2 mt-0 hidden lg:block">
-      <section className="relative h-[92vh] overflow-hidden rounded-2xl bg-[#070707] text-white">
-        {/* 🎥 Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source src={HeroVideo} type="video/mp4" />
-        </video>
+      <section className="relative h-[92vh] overflow-hidden rounded-2xl bg-[#070707] text-white transition-opacity duration-1000">
+        {/* 🎥 Background Video / Fallback Image */}
+        {videoError ? (
+          <img
+            src={HeroBgImg}
+            alt="Hero Background"
+            onLoad={() => setMediaLoaded(true)}
+            className={`absolute inset-0 w-full h-full object-cover z-0 transition-all duration-2000 ease-out ${
+              mediaLoaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-105"
+            }`}
+          />
+        ) : (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            onCanPlay={() => setMediaLoaded(true)}
+            onError={() => setVideoError(true)}
+            className={`absolute inset-0 w-full h-full object-cover z-0 transition-all duration-2000 ease-out ${
+              mediaLoaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-105"
+            }`}
+          >
+            <source src={HeroVideo} type="video/mp4" />
+          </video>
+        )}
 
         {/* 🌑 Dark Overlay (for contrast + readability) */}
         <div className="absolute inset-0 bg-black/30 z-1" />
