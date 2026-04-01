@@ -37,21 +37,39 @@ const SectionTwo = () => {
             </p>
 
             <div className="text-xl md:text-2xl font-medium flex flex-col gap-2">
-              <p className="flex items-center gap-2">
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/company/the-cyntax"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:opacity-70 transition"
+              >
                 Linked In <ArrowUpRight className="text-[#767676]" />
-              </p>
+              </a>
 
-              <p className="flex items-center gap-2">
+              {/* GitHub (add your link if needed) */}
+              <a
+                href="#"
+                className="flex items-center gap-2 hover:opacity-70 transition"
+              >
                 GitHub <ArrowUpRight className="text-[#767676]" />
-              </p>
+              </a>
 
-              <p className="flex items-center gap-2">
+              {/* Contact Us (you can link to contact section later) */}
+              <a
+                href="#contact"
+                className="flex items-center gap-2 hover:opacity-70 transition"
+              >
                 Contact Us <ArrowUpRight className="text-[#767676]" />
-              </p>
+              </a>
 
-              <p className="flex items-center gap-2">
+              {/* Mail */}
+              <a
+                href="mailto:thecyntax@gmail.com"
+                className="flex items-center gap-2 hover:opacity-70 transition"
+              >
                 Mail Us <ArrowUpRight className="text-[#767676]" />
-              </p>
+              </a>
             </div>
           </div>
         </div>
@@ -69,7 +87,7 @@ const SectionTwo = () => {
             </div>
 
             <h1 className="text-2xl md:text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl font-medium underline whitespace-nowrap">
-            thecyntax.company@gmail.com
+              thecyntax.company@gmail.com
             </h1>
           </div>
         </div>
