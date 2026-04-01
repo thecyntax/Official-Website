@@ -17,21 +17,20 @@ const Footer = () => {
               className="text-[#767676] text-2xl sm:text-2xl md:text-3xl font-medium 
                         sm:text-left md:indent-8 lg:indent-12"
             >
-              &nbsp; &nbsp; &nbsp; Whether you’re looking to build a stunning
-              website, boost your brand, or drive measurable results,{" "}
-              <span className="text-black">we’re here to help.</span>
+              &nbsp; &nbsp; &nbsp; “Science is what we understand well enough to explain to a computer.{" "}
+              <span className="text-black">Art is everything else we do.”</span>
             </p>
 
             <div className="flex items-center gap-3">
               <img
                 className="w-12 h-12 rounded-full object-cover"
-                src="https://placehold.co/200x200"
-                alt="placeholder"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Donald_Ervin_Knuth_%28cropped%29.jpg/250px-Donald_Ervin_Knuth_%28cropped%29.jpg"
+                alt="Donald Knuth"
               />
               <div>
-                <p className="font-semibold text-sm md:text-base">Steve Jobs</p>
+                <p className="font-semibold text-sm md:text-base">Donald Knuth</p>
                 <p className="text-[#767676] text-[11px] md:text-[12px]">
-                  Co-founder of Apple
+                  Computer Scientist
                 </p>
               </div>
             </div>
