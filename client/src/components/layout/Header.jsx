@@ -54,7 +54,7 @@ const Header = () => {
       </header>
 
       {/* SPACER (prevents content overlap) */}
-      <div className="h-17 lg:h-[68px]" />
+      <div className="h-15 lg:h-[68px]" />
 
       {/* MENU */}
       <div
