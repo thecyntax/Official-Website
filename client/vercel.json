@@ -10,25 +10,14 @@
         {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, HEAD, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "*"
         }
       ]
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/robots.txt",
-      "headers": {
-        "Content-Type": "text/plain"
-      },
-      "dest": "/robots.txt"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
