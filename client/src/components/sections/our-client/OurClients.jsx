@@ -39,7 +39,7 @@ const logos = clients.map((c) => ({ src: c.logo, alt: c.label }));
 const OurClients = () => {
   return (
     <section>
-      <div className="px-4 py-[10px] mx-auto lg:m-10 lg:py-8 sm:py-10 md:py-12 lg:min-h-[100svh] lg:flex lg:flex-col">
+      <div className="px-4 py-[10px] mx-auto lg:m-10 lg:mb-0 lg:py-8 sm:py-10 md:py-12 lg:min-h-[100svh] lg:flex lg:flex-col">
         {/* HEADER */}
         <div className="pt-6 sm:pt-8 md:pt-10">
           <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-5 lg:gap-8 mb-6 sm:mb-8 lg:mb-12">
@@ -75,7 +75,7 @@ const OurClients = () => {
         </div>
 
         {/* CONTENT */}
-        <div className="flex flex-col gap-8 sm:gap-10 lg:flex-1 lg:justify-center lg:gap-20 pb-6 sm:pb-8 lg:pb-10">
+        <div className="flex flex-col gap-8 sm:gap-10 lg:flex-1 lg:justify-center lg:gap-20 pb-6 sm:pb-8 lg:pb-0">
           {/* TEXT */}
           <div className="text-center max-w-[600px] mx-auto">
             <h3 className="text-[18px] sm:text-[24px] lg:text-[36px] font-medium text-black leading-[1.3]">
