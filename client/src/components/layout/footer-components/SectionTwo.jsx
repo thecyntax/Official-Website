@@ -98,7 +98,6 @@
 
 // export default SectionTwo;
 
-
 import React from "react";
 import { Plus, ArrowUpRight, AtSign, Mail } from "lucide-react";
 
@@ -106,7 +105,6 @@ const SectionTwo = () => {
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-16">
-
         {/* COLUMN 1 */}
         <div>
           <div className="py-6 sm:py-10 md:py-14">
@@ -132,8 +130,12 @@ const SectionTwo = () => {
           <p className="text-[#767676] text-[13px] pb-2">Connect Us</p>
 
           <div className="text-lg sm:text-xl md:text-2xl font-medium flex flex-col gap-2">
-
-            <a href="https://www.linkedin.com/company/the-cyntax" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a
+              href="https://www.linkedin.com/company/the-cyntax"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
               LinkedIn <ArrowUpRight />
             </a>
 
@@ -145,15 +147,17 @@ const SectionTwo = () => {
               Contact <ArrowUpRight />
             </a>
 
-            <a href="mailto:thecyntax@gmail.com" className="flex items-center gap-2">
+            <a
+              href="mailto:thecyntax@gmail.com"
+              className="flex items-center gap-2"
+            >
               Mail <ArrowUpRight />
             </a>
-
           </div>
         </div>
 
         {/* COLUMN 3 */}
-        <div className="md:col-span-2 lg:col-span-1">
+        <div className="md:col-span-2 lg:col-span-1  ">
           <div className="py-6 sm:py-10 md:py-14">
             <Plus className="text-[#767676]" />
           </div>
@@ -168,7 +172,6 @@ const SectionTwo = () => {
             thecyntax@gmail.com
           </h1>
         </div>
-
       </div>
     </section>
   );
