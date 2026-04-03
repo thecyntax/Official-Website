@@ -68,46 +68,47 @@ const WhyChooseUs = () => {
             {reasons.map((item) => {
               const Icon = item.icon;
               return (
-              <div
-                key={item.id}
-                className="group rounded-2xl lg:rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-6 md:p-7 transition-all duration-300 hover:bg-white/10 hover:border-white/20"
-              >
-                <div className="flex items-center justify-between mb-5 sm:mb-7">
-                  <span className="text-gray-500 text-[11px] sm:text-sm font-medium tracking-[0.18em]">
-                    ({item.id})
-                  </span>
+                <div
+                  key={item.id}
+                  className="group rounded-2xl lg:rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-6 md:p-7 transition-all duration-300 hover:bg-white/10 hover:border-white/20"
+                >
+                  <div className="flex items-center justify-between mb-5 sm:mb-7">
+                    <span className="text-gray-500 text-[11px] sm:text-sm font-medium tracking-[0.18em]">
+                      ({item.id})
+                    </span>
 
-                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 flex items-center justify-center text-white/80 transition-all duration-300 group-hover:bg-white group-hover:text-black">
-                    <Icon className="w-4 h-4" />
+                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 flex items-center justify-center text-white/80 transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                      <Icon className="w-4 h-4" />
+                    </div>
                   </div>
+
+                  <h3 className="text-[18px] sm:text-[24px] lg:text-[28px] font-bold tracking-tighter leading-[1.1] text-white mb-3 sm:mb-5">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-400 text-[13px] sm:text-[15px] leading-[1.6] max-w-[320px]">
+                    {item.description}
+                  </p>
+
+                  <div className="mt-5 sm:mt-7 h-px w-full bg-white/10" />
+
+                  <p className="mt-3 text-[10px] sm:text-[12px] uppercase tracking-[0.22em] text-gray-500">
+                    The Cyntax
+                  </p>
                 </div>
-
-                <h3 className="text-[18px] sm:text-[24px] lg:text-[28px] font-bold tracking-tighter leading-[1.1] text-white mb-3 sm:mb-5">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-400 text-[13px] sm:text-[15px] leading-[1.6] max-w-[320px]">
-                  {item.description}
-                </p>
-
-                <div className="mt-5 sm:mt-7 h-px w-full bg-white/10" />
-
-                <p className="mt-3 text-[10px] sm:text-[12px] uppercase tracking-[0.22em] text-gray-500">
-                  The Cyntax
-                </p>
-              </div>
-            )})}
+              );
+            })}
           </div>
 
           {/* CTA */}
-          <div className="mt-10 sm:mt-14 md:mt-20 flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 sm:gap-8">
+          <div className="mt-10 sm:mt-14 md:mt-20 flex flex-col lg:flex-row items-center lg:items-end justify-between gap-6 sm:gap-8 text-center lg:text-left">
             <p className="text-gray-400 text-[13px] sm:text-[15px] md:text-[16px] max-w-[600px] leading-[1.6]">
               If you need a website, product experience, or marketing presence
               that feels refined and performs well, this section can help you
               position your brand with more confidence.
             </p>
 
-            <button className="group inline-flex items-center gap-3 bg-white text-black font-semibold text-[13px] sm:text-[15px] px-6 sm:px-10 py-3 sm:py-4 rounded-full shadow-[0_0_24px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]">
+            <button className="group inline-flex items-center gap-3 bg-white text-black font-semibold text-[13px] sm:text-[15px] px-6 sm:px-10 py-3 sm:py-4 rounded-full shadow-[0_0_24px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] mx-auto lg:mx-0">
               Start your project
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 →
