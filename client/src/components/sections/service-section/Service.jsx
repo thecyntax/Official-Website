@@ -8,9 +8,8 @@ const servicesData = [
     title: "Web design and development",
     description:
       "Modern, responsive, and user-friendly websites designed to engage visitors and drive conversions.",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=400&auto=format&fit=crop",
-    iconLetter: "M",
+    image: "/des vs dev.webp",
+    // iconLetter: "M",
     categories: [
       "Packaging design",
       "Logo design",
@@ -26,9 +25,8 @@ const servicesData = [
     title: "Social media marketing",
     description:
       "Strategic social campaigns crafted to build brand awareness, engage your target audience, and drive meaningful growth.",
-    image:
-      "https://images.unsplash.com/photo-1611162619698-10029b3527fb?q=80&w=400&auto=format&fit=crop",
-    iconLetter: "S",
+    image: "/vector-1756205138207-12aa66e02248.avif",
+    // iconLetter: "S",
     categories: [
       "Content Creation",
       "Campaign Strategy",
@@ -42,9 +40,8 @@ const servicesData = [
     title: "SEO and content marketing",
     description:
       "Data-driven SEO and engaging content designed to improve visibility and rank your brand at the top of search results.",
-    image:
-      "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?q=80&w=400&auto=format&fit=crop",
-    iconLetter: "C",
+    image: "/vector-1762541291924-8b1ba27cd39c.avif",
+    // iconLetter: "C",
     categories: [
       "Keyword Research",
       "Copywriting",
@@ -58,9 +55,8 @@ const servicesData = [
     title: "Branding and identity",
     description:
       "Memorable brand identities that tell your unique story and establish a lasting connection with your audience.",
-    image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=400&auto=format&fit=crop",
-    iconLetter: "B",
+    image: "/premium_vector-1736875279078-a9d32af802d1.avif",
+    // iconLetter: "B",
     categories: ["Logo Design", "Brand Strategy", "Typography", "Color Theory"],
     extraCount: "3+",
   },
