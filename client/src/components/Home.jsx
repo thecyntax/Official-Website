@@ -7,11 +7,19 @@ import OurClients from "./sections/our-client/OurClients";
 const Home = () => {
   return (
     <div>
-      <Hero />
+      <div id="home" className="scroll-mt-24">
+        <Hero />
+      </div>
       <OurClients />
-      <WhyChooseUs />
-      <Project />
-      <Service />
+      <div id="why-choose-us" className="scroll-mt-13 lg:scroll-mt-16">
+        <WhyChooseUs />
+      </div>
+      <div id="projects" className="scroll-mt-13 lg:scroll-mt-16">
+        <Project />
+      </div>
+      <div id="services" className="scroll-mt-13 lg:scroll-mt-16">
+        <Service />
+      </div>
     </div>
   );
 };

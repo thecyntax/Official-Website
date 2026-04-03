@@ -67,38 +67,43 @@ const Service = () => {
 
   return (
     <div id="services" className="p-2 sm:p-3 lg:p-2 w-full bg-[#f5f5f5]">
-      <section className="w-full rounded-2xl overflow-hidden text-white  bg-[#070707] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1b1b1b] via-[#090909] to-[#050505] shadow-2xl">
-        <div className="px-4 py-10 md:py-12 mx-auto lg:m-10">
-          {/* Header */}
-          <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-8 mb-16 md:mb-24">
-            <div className="w-full lg:w-1/4 flex items-center gap-2.5">
-              <div className="w-5 h-5 rounded-full border-[1.5px] bg-black flex items-center justify-center text-sm leading-none shrink-0 pt-px">
+      <section className="w-full rounded-2xl overflow-hidden text-white bg-[#070707] bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-[#1b1b1b] via-[#090909] to-[#050505] shadow-2xl">
+        <div className="px-4 py-8 sm:py-10 md:py-12 mx-auto lg:m-10">
+          {/* HEADER */}
+          <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-8 mb-10 sm:mb-14 md:mb-20">
+            {/* LEFT */}
+            <div className="w-full lg:w-1/4 flex items-center gap-2">
+              <div className="w-5 h-5 rounded-full border bg-black flex items-center justify-center">
                 <Plus className="w-4 h-4 text-white" />
               </div>
-              <span className="text-gray-500 font-medium text-[15px]">
+              <span className="text-gray-500 font-medium text-[13px] sm:text-[15px]">
                 What we do
               </span>
             </div>
 
+            {/* CENTER */}
             <div className="w-full lg:w-2/4 flex flex-col items-start lg:items-center">
-              <h1 className="text-[18vw] lg:text-[11vw] leading-[0.85] font-bold tracking-tighter text-white">
+              {/* 🔥 FIXED HEADING */}
+              <h1 className="font-bold tracking-tighter text-white leading-[0.9] text-[clamp(48px,14vw,120px)]">
                 Services.
               </h1>
-              <span className="text-3xl lg:text-[2.5vw] font-bold tracking-tighter text-gray-400 mt-2 lg:mt-4">
+
+              <span className="text-lg sm:text-xl lg:text-[2.2vw] font-bold tracking-tighter text-gray-400 mt-2 sm:mt-3">
                 ({servicesData.length})
               </span>
             </div>
 
+            {/* RIGHT */}
             <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
-              <p className="text-gray-400 text-[15px] font-medium leading-[1.6] max-w-[260px]">
+              <p className="text-gray-400 text-[13px] sm:text-[15px] font-medium leading-[1.6] max-w-[260px]">
                 We provide comprehensive digital solutions designed to elevate
                 your brand and drive meaningful growth.
               </p>
             </div>
           </div>
 
-          {/* Accordion */}
-          <div className="space-y-4">
+          {/* ACCORDION */}
+          <div className="space-y-3 sm:space-y-4">
             {servicesData.map((service) => {
               const isExpanded = expandedId === service.id;
 
@@ -106,124 +111,74 @@ const Service = () => {
                 <motion.article
                   key={service.id}
                   layout
-                  transition={{
-                    layout: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
-                  }}
-                  className={`group relative overflow-hidden rounded-3xl border ${
+                  transition={{ duration: 0.35 }}
+                  className={`group relative overflow-hidden rounded-2xl lg:rounded-3xl border ${
                     isExpanded
-                      ? "border-white/15 bg-white/[0.04] shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
-                      : "border-white/10 bg-white/[0.02] hover:bg-white/[0.04]"
+                      ? "border-white/15 bg-white/5"
+                      : "border-white/10 bg-white/3 hover:bg-white/5"
                   }`}
                 >
-                  {/* subtle glow */}
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_30%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
                   <button
-                    type="button"
                     onClick={() => handleToggle(service.id)}
-                    className="relative z-10 w-full text-left px-5 sm:px-6 md:px-7 py-5 sm:py-6 md:py-7"
-                    aria-expanded={isExpanded}
-                    aria-controls={`accordion-panel-${service.id}`}
+                    className="w-full text-left px-4 sm:px-6 py-4 sm:py-6"
                   >
-                    <div className="flex items-center justify-between gap-5">
-                      <div className="flex items-start md:items-center gap-4 md:gap-10 min-w-0">
-                        <span className="text-[13px] sm:text-[14px] text-gray-500 font-medium shrink-0 mt-1 md:mt-0">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-start sm:items-center gap-3 sm:gap-6 min-w-0">
+                        <span className="text-[12px] sm:text-[14px] text-gray-500">
                           ({service.id})
                         </span>
 
-                        <h3
-                          className={`min-w-0 text-[20px] sm:text-[24px] md:text-[30px] lg:text-[34px] leading-[1.08] tracking-tight  transition-colors duration-300 ${
-                            isExpanded
-                              ? "text-white"
-                              : "text-white/90 group-hover:text-white"
-                          }`}
-                        >
+                        <h3 className="text-[16px] sm:text-[22px] md:text-[28px] lg:text-[32px] leading-[1.1] tracking-tight text-white">
                           {service.title}
                         </h3>
                       </div>
 
-                      <motion.div
-                        animate={{ rotate: isExpanded ? 180 : 0 }}
-                        transition={{
-                          duration: 0.35,
-                          ease: [0.22, 1, 0.36, 1],
-                        }}
-                        className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center border transition-colors duration-300 ${
-                          isExpanded
-                            ? "border-white/15 bg-white/5"
-                            : "border-white/15 bg-transparent group-hover:bg-white group-hover:text-black"
-                        }`}
-                      >
-                        <span className="relative block w-4 h-4">
-                          <span className="absolute left-0 top-1/2 w-4 h-px -translate-y-1/2 bg-current rounded-full" />
-                          {!isExpanded && (
-                            <span className="absolute left-1/2 top-0 h-4 w-px -translate-x-1/2 bg-current rounded-full" />
-                          )}
-                        </span>
-                      </motion.div>
+                      <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border border-white/15">
+                        <Plus
+                          className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-45" : ""}`}
+                        />
+                      </div>
                     </div>
                   </button>
 
-                  <AnimatePresence initial={false}>
+                  <AnimatePresence>
                     {isExpanded && (
                       <motion.div
-                        id={`accordion-panel-${service.id}`}
-                        key="content"
-                        initial={{ height: 0, opacity: 0, y: -8 }}
-                        animate={{ height: "auto", opacity: 1, y: 0 }}
-                        exit={{ height: 0, opacity: 0, y: -8 }}
-                        transition={{
-                          height: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
-                          opacity: { duration: 0.25, ease: "easeOut" },
-                          y: { duration: 0.25, ease: "easeOut" },
-                        }}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 sm:px-6 md:px-7 pb-6 md:pb-7">
-                          <div className="pt-2 md:pt-1 grid grid-cols-1 xl:grid-cols-[420px_1fr] gap-8 md:gap-10 items-start">
-                            {/* Image */}
-                            <div className="relative w-full h-[240px] sm:h-[280px] md:h-[320px] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-lg">
-                              <motion.img
+                        <div className="px-4 sm:px-6 pb-5 sm:pb-6">
+                          <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-6 sm:gap-8">
+                            {/* IMAGE */}
+                            <div className="w-full h-[200px] sm:h-[260px] rounded-2xl overflow-hidden">
+                              <img
                                 src={service.image}
-                                alt={service.title}
-                                loading="lazy"
-                                decoding="async"
-                                className="w-full h-full object-cover will-change-transform"
-                                initial={{ scale: 1.04 }}
-                                animate={{ scale: 1 }}
-                                transition={{
-                                  duration: 0.6,
-                                  ease: [0.22, 1, 0.36, 1],
-                                }}
+                                alt=""
+                                className="w-full h-full object-cover"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                             </div>
 
-                            {/* Text */}
-                            <div className="flex flex-col gap-6 md:pt-2">
-                              <p className="text-[15px] sm:text-[16px] md:text-[18px] text-gray-400 leading-[1.7] max-w-[560px]">
+                            {/* TEXT */}
+                            <div className="flex flex-col gap-4">
+                              <p className="text-[13px] sm:text-[15px] text-gray-400 leading-[1.6]">
                                 {service.description}
                               </p>
 
-                              <div className="flex flex-col gap-3">
-                                <span className="text-[11px] sm:text-[12px] text-gray-500 font-medium tracking-[0.22em] uppercase">
-                                  Categories
-                                </span>
-
-                                <div className="flex flex-wrap gap-2.5 max-w-[650px]">
-                                  {service.categories.map((category, index) => (
-                                    <span
-                                      key={index}
-                                      className="bg-white/5 border border-white/10 text-white/90 text-[12px] sm:text-[13px] font-medium px-4 py-2 rounded-full tracking-wide hover:bg-white/10 hover:border-white/15 transition-all duration-300 cursor-default"
-                                    >
-                                      {category}
-                                    </span>
-                                  ))}
-
-                                  <span className="bg-white/8 border border-white/10 text-gray-300 text-[12px] sm:text-[13px] font-bold px-4 py-2 rounded-full tracking-wide cursor-default">
-                                    {service.extraCount}
+                              <div className="flex flex-wrap gap-2">
+                                {service.categories.map((c, i) => (
+                                  <span
+                                    key={i}
+                                    className="text-[11px] sm:text-[13px] px-3 py-1.5 bg-white/5 rounded-full"
+                                  >
+                                    {c}
                                   </span>
-                                </div>
+                                ))}
+                                <span className="text-[11px] sm:text-[13px] px-3 py-1.5 bg-white/10 rounded-full font-bold">
+                                  {service.extraCount}
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -237,12 +192,9 @@ const Service = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 md:mt-24 flex justify-center w-full">
-            <button className="group inline-flex items-center gap-3 bg-white text-black font-semibold text-[15px] px-10 py-4 rounded-full shadow-[0_0_24px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]">
-              Get started
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+          <div className="mt-10 sm:mt-14 flex justify-center">
+            <button className="group inline-flex items-center gap-3 bg-white text-black font-semibold text-[13px] sm:text-[15px] px-6 sm:px-10 py-3 sm:py-4 rounded-full transition hover:scale-[1.03]">
+              Get started →
             </button>
           </div>
         </div>
