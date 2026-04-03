@@ -19,44 +19,54 @@ const Project = () => {
     },
     {
       id: 2,
-      title: "Ephemeral.",
+      title: "Volt.",
       year: "/2025",
-      image:
-        "https://images.unsplash.com/photo-1494869042583-f6c911f04b4c?q=80&w=1000&auto=format&fit=crop",
-      brandName: "Ephemeral",
-      coloredDots: false,
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+      brandName: "Volt",
+      coloredDots: true,
       logo: (
         <svg
-          className="w-8 h-8 md:w-10 md:h-10 text-white"
+          className="w-8 h-8 md:w-10 md:h-10 text-white fill-current"
           viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
         >
-          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          <circle cx="12" cy="12" r="11" fill="white" />
+          <path d="M13 6L7 13h4v5l6-7h-4V6z" fill="#998375" />
         </svg>
       ),
     },
     {
       id: 3,
-      title: "Powersurge.",
-      year: "/2024",
-      image:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-      brandName: "",
-      coloredDots: false,
-      logo: null,
+      title: "Nexus.",
+      year: "/2025",
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+      brandName: "Nexus",
+      coloredDots: true,
+      logo: (
+        <svg
+          className="w-8 h-8 md:w-10 md:h-10 text-white fill-current"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="12" cy="12" r="11" fill="white" />
+          <path d="M13 6L7 13h4v5l6-7h-4V6z" fill="#998375" />
+        </svg>
+      ),
     },
     {
       id: 4,
-      title: "Mastermail.",
-      year: "/2024",
-      image:
-        "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1000&auto=format&fit=crop",
-      brandName: "",
-      coloredDots: false,
-      logo: null,
+      title: "Aura.",
+      year: "/2025",
+      image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1000&auto=format&fit=crop",
+      brandName: "Aura",
+      coloredDots: true,
+      logo: (
+        <svg
+          className="w-8 h-8 md:w-10 md:h-10 text-white fill-current"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="12" cy="12" r="11" fill="white" />
+          <path d="M13 6L7 13h4v5l6-7h-4V6z" fill="#998375" />
+        </svg>
+      ),
     },
   ];
 
