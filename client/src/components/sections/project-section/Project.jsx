@@ -136,7 +136,7 @@ const Project = () => {
                 </div>
 
                 {/* Card Image Wrapper */}
-                <div className="relative w-full aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer shadow-sm">
+                <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer shadow-sm">
                   {card.image?.endsWith('.mp4') ? (
                     <video
                       src={card.image}
