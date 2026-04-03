@@ -110,11 +110,10 @@ const Service = () => {
                   key={service.id}
                   layout
                   transition={{ duration: 0.35 }}
-                  className={`group relative overflow-hidden rounded-2xl lg:rounded-3xl border ${
-                    isExpanded
+                  className={`group relative overflow-hidden rounded-2xl lg:rounded-3xl border ${isExpanded
                       ? "border-white/15 bg-white/5"
                       : "border-white/10 bg-white/3 hover:bg-white/5"
-                  }`}
+                    }`}
                 >
                   <button
                     type="button"
