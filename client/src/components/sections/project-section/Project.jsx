@@ -168,6 +168,8 @@ const Project = () => {
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-500"></div>
 
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-500"></div>
+
                   {card.brandName && (
                     <div className="absolute inset-0 flex items-center justify-center gap-2 sm:gap-3 text-white z-10">
                       {card.logo}
