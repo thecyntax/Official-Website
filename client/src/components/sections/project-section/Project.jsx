@@ -2,15 +2,10 @@ const Project = () => {
   const portfolioCards = [
     {
       id: 1,
-      title: 'NexLab.',
-      year: '/2025',
-      image: '/NexLab.webp',
-      brandName: 'NexLab',
-      title: "Boltshift.",
+      title: "NexLab.",
       year: "/2025",
-      image:
-        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop",
-      brandName: "Boltshift",
+      image: "/NexLab.webp",
+      brandName: "NexLab",
       coloredDots: true,
       logo: (
         <svg
