@@ -14,10 +14,10 @@ const Header = () => {
   return (
     <>
       {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full px-6 py-5 flex items-center justify-between bg-[#F5F5F5] md:px-10 md:justify-start lg:justify-between md:gap-10 z-50">
+      <header className="fixed top-0 left-0 w-full h-[64px] px-6 flex items-center justify-between bg-[#F5F5F5] md:px-10 md:justify-start lg:justify-between md:gap-10 z-50">
+      
         {/* Logo */}
         <img src={Logo} alt="The Cyntax Logo" className="h-5 md:h-6.25" />
-
         {/* Desktop Nav */}
         {menuItems.map((item) => (
           <a
@@ -34,7 +34,6 @@ const Header = () => {
             {item.name}
           </a>
         ))}
-
         {/* Hamburger */}
         <button
           onClick={() => setMenuOpen((prev) => !prev)}
