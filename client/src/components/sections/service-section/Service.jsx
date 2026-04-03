@@ -59,10 +59,12 @@ const servicesData = [
 ];
 
 const Service = () => {
-  const [expandedId, setExpandedId] = useState("001");
+  const [expandedId, setExpandedId] = useState(
+    servicesData.length ? servicesData[0].id : null,
+  );
 
   const handleToggle = (id) => {
-    setExpandedId((prev) => (prev === id ? null : id));
+    setExpandedId((prevId) => (prevId === id ? null : id));
   };
 
   return (
@@ -71,7 +73,6 @@ const Service = () => {
         <div className="px-4 py-8 sm:py-10 md:py-12 mx-auto lg:m-10">
           {/* HEADER */}
           <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-8 mb-10 sm:mb-14 md:mb-20">
-            {/* LEFT */}
             <div className="w-full lg:w-1/4 flex items-center gap-2">
               <div className="w-5 h-5 rounded-full border bg-black flex items-center justify-center">
                 <Plus className="w-4 h-4 text-white" />
@@ -81,9 +82,7 @@ const Service = () => {
               </span>
             </div>
 
-            {/* CENTER */}
             <div className="w-full lg:w-2/4 flex flex-col items-start lg:items-center">
-              {/* 🔥 FIXED HEADING */}
               <h1 className="font-bold tracking-tighter text-white leading-[0.9] text-[clamp(48px,14vw,120px)]">
                 Services.
               </h1>
@@ -93,7 +92,6 @@ const Service = () => {
               </span>
             </div>
 
-            {/* RIGHT */}
             <div className="w-full lg:w-1/4 flex justify-start lg:justify-end">
               <p className="text-gray-400 text-[13px] sm:text-[15px] font-medium leading-[1.6] max-w-[260px]">
                 We provide comprehensive digital solutions designed to elevate
@@ -118,8 +116,9 @@ const Service = () => {
                     }`}
                 >
                   <button
+                    type="button"
                     onClick={() => handleToggle(service.id)}
-                    className="w-full text-left px-4 sm:px-6 py-4 sm:py-6"
+                    className="relative z-10 w-full text-left px-4 sm:px-6 py-4 sm:py-6 cursor-pointer"
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex items-start sm:items-center gap-3 sm:gap-6 min-w-0">
@@ -132,7 +131,7 @@ const Service = () => {
                         </h3>
                       </div>
 
-                      <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border border-white/15">
+                      <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border border-white/15 hover:bg-white hover:text-black transition-all duration-300 group-hover:bg-white group-hover:text-black">
                         <motion.div
                           initial={false}
                           animate={{ rotate: isExpanded ? 45 : 0 }}
@@ -151,18 +150,19 @@ const Service = () => {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden relative z-0"
                       >
                         <div className="px-4 sm:px-6 pb-5 sm:pb-6">
                           <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-6 sm:gap-8">
                             {/* IMAGE */}
-                            <div className="w-full h-[200px] sm:h-[260px] rounded-2xl overflow-hidden">
+                            <div className="relative w-full h-[200px] sm:h-[260px] rounded-2xl overflow-hidden">
                               <img
                                 src={service.image}
                                 alt=""
                                 className="w-full h-full object-cover"
                               />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                              <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent" />
                             </div>
 
                             {/* TEXT */}
