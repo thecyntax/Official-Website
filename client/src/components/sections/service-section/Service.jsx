@@ -112,11 +112,10 @@ const Service = () => {
                   key={service.id}
                   layout
                   transition={{ duration: 0.35 }}
-                  className={`group relative overflow-hidden rounded-2xl lg:rounded-3xl border ${
-                    isExpanded
+                  className={`group relative overflow-hidden rounded-2xl lg:rounded-3xl border ${isExpanded
                       ? "border-white/15 bg-white/5"
                       : "border-white/10 bg-white/3 hover:bg-white/5"
-                  }`}
+                    }`}
                 >
                   <button
                     onClick={() => handleToggle(service.id)}
@@ -134,16 +133,21 @@ const Service = () => {
                       </div>
 
                       <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border border-white/15">
-                        <Plus
-                          className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-45" : ""}`}
-                        />
+                        <motion.div
+                          initial={false}
+                          animate={{ rotate: isExpanded ? 45 : 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                        >
+                          <Plus className="w-4 h-4" />
+                        </motion.div>
                       </div>
                     </div>
                   </button>
 
-                  <AnimatePresence>
+                  <AnimatePresence initial={false}>
                     {isExpanded && (
                       <motion.div
+                        key={`content-${service.id}`}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
