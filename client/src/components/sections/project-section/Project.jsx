@@ -2,6 +2,10 @@ const Project = () => {
   const portfolioCards = [
     {
       id: 1,
+      title: 'NexLab.',
+      year: '/2025',
+      image: '/NexLab.webp',
+      brandName: 'NexLab',
       title: "Boltshift.",
       year: "/2025",
       image:
@@ -62,6 +66,13 @@ const Project = () => {
   ];
 
   return (
+    <section id="projects" className="bg-[#f5f5f5] ">
+
+      {/* SAME CONTAINER AS FOOTER */}
+      <div className="px-4 py-10 md:py-12 mx-auto lg:m-10 mb-0 lg:mb-0">
+
+        {/* Middle Section: Typography Layout */}
+        <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12 lg:gap-0 mb-20 md:mb-32">
     <section id="projects">
       <div className="px-4 py-8 sm:py-10 md:py-12 mx-auto lg:m-10">
         {/* HEADER */}
@@ -126,6 +137,26 @@ const Project = () => {
                   </div>
                 </div>
 
+                {/* Card Image Wrapper */}
+                <div className="relative w-full aspect-16/11 md:aspect-4/3 rounded-3xl overflow-hidden cursor-pointer shadow-sm">
+                  {card.image.endsWith('.mp4') ? (
+                    <video
+                      src={card.image}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
+                    />
+                  ) : (
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
+                    />
+                  )}
                 {/* IMAGE */}
                 <div className="relative w-full aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer shadow-sm">
                   <img
@@ -135,6 +166,7 @@ const Project = () => {
                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-500"></div>
 
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-500"></div>
 
