@@ -59,10 +59,10 @@ const servicesData = [
 ];
 
 const Service = () => {
-  const [expandedId, setExpandedId] = useState("001");
+  const [expandedId, setExpandedId] = useState(null);
 
   const handleToggle = (id) => {
-    setExpandedId((prev) => (prev === id ? null : id));
+    setExpandedId(expandedId === id ? null : id);
   };
 
   return (
@@ -112,15 +112,14 @@ const Service = () => {
                   key={service.id}
                   layout
                   transition={{ duration: 0.35 }}
-                  className={`group relative overflow-hidden rounded-2xl lg:rounded-3xl border ${
-                    isExpanded
-                      ? "border-white/15 bg-white/5"
-                      : "border-white/10 bg-white/3 hover:bg-white/5"
-                  }`}
+                  className={`group relative overflow-hidden rounded-2xl lg:rounded-3xl border ${isExpanded
+                    ? "border-white/15 bg-white/5"
+                    : "border-white/10 bg-white/3 hover:bg-white/5"
+                    }`}
                 >
-                  <button
+                  <div
                     onClick={() => handleToggle(service.id)}
-                    className="w-full text-left px-4 sm:px-6 py-4 sm:py-6"
+                    className="w-full text-left px-4 sm:px-6 py-4 sm:py-6 cursor-pointer"
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex items-start sm:items-center gap-3 sm:gap-6 min-w-0">
@@ -133,17 +132,22 @@ const Service = () => {
                         </h3>
                       </div>
 
-                      <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border border-white/15">
-                        <Plus
-                          className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-45" : ""}`}
-                        />
+                      <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border border-white/15 hover:bg-white hover:text-black transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                        <motion.div
+                          initial={false}
+                          animate={{ rotate: isExpanded ? 45 : 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                        >
+                          <Plus className="w-4 h-4" />
+                        </motion.div>
                       </div>
                     </div>
-                  </button>
+                  </div>
 
-                  <AnimatePresence>
+                  <AnimatePresence initial={false}>
                     {isExpanded && (
                       <motion.div
+                        key={`content-${service.id}`}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}

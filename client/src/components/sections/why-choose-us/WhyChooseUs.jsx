@@ -1,5 +1,5 @@
 import React from "react";
-import { Plus } from "lucide-react";
+import { Plus, Sparkles, Zap, Target } from "lucide-react";
 
 const reasons = [
   {
@@ -7,18 +7,21 @@ const reasons = [
     title: "Design that feels premium",
     description:
       "We create clean, modern interfaces with strong typography, balanced spacing, and a polished visual rhythm that makes your brand feel elevated.",
+    icon: Sparkles,
   },
   {
     id: "02",
     title: "Built for performance",
     description:
       "Every screen is designed to be fast, responsive, and conversion-focused, so your users get a smooth experience on every device.",
+    icon: Zap,
   },
   {
     id: "03",
     title: "Strategy beyond visuals",
     description:
       "We do not just make things look good. We align design, development, and marketing so the final product supports real business growth.",
+    icon: Target,
   },
 ];
 
@@ -62,7 +65,9 @@ const WhyChooseUs = () => {
 
           {/* REASONS */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-            {reasons.map((item) => (
+            {reasons.map((item) => {
+              const Icon = item.icon;
+              return (
               <div
                 key={item.id}
                 className="group rounded-2xl lg:rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-6 md:p-7 transition-all duration-300 hover:bg-white/10 hover:border-white/20"
@@ -73,7 +78,7 @@ const WhyChooseUs = () => {
                   </span>
 
                   <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 flex items-center justify-center text-white/80 transition-all duration-300 group-hover:bg-white group-hover:text-black">
-                    <Plus className="w-4 h-4" />
+                    <Icon className="w-4 h-4" />
                   </div>
                 </div>
 
@@ -91,7 +96,7 @@ const WhyChooseUs = () => {
                   The Cyntax
                 </p>
               </div>
-            ))}
+            )})}
           </div>
 
           {/* CTA */}
