@@ -61,7 +61,7 @@ const Project = () => {
   ];
 
   return (
-    <section id="projects" className="bg-[#f5f5f5]">
+    <section id="projects" >
       <div className="px-4 py-8 sm:py-10 md:py-12 mx-auto lg:m-10">
         {/* HEADER */}
         <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-0 mb-10 sm:mb-16 md:mb-24">
