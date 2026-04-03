@@ -12,9 +12,9 @@ const Header = () => {
   ];
 
   return (
-    <div className="relative">
+    <>
       {/* HEADER */}
-      <header className="mx-6 my-5 flex items-center justify-between bg-[#F5F5F5] md:mx-10 md:justify-start lg:justify-between md:gap-10 relative z-50">
+      <header className="fixed top-0 left-0 w-full px-6 py-5 flex items-center justify-between bg-[#F5F5F5] md:px-10 md:justify-start lg:justify-between md:gap-10 z-50">
         {/* Logo */}
         <img src={Logo} alt="The Cyntax Logo" className="h-5 md:h-6.25" />
 
@@ -53,9 +53,12 @@ const Header = () => {
         </button>
       </header>
 
+      {/* SPACER (prevents content overlap) */}
+      <div className="h-15 lg:h-[68px]" />
+
       {/* MENU */}
       <div
-        className={`absolute left-0 right-0 top-full z-40 bg-[#F5F5F5] transition-all duration-500 ease-in-out ${
+        className={`fixed left-0 right-0 top-[64px] z-40 bg-[#F5F5F5] transition-all duration-500 ease-in-out ${
           menuOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0 pointer-events-none"
@@ -75,7 +78,7 @@ const Header = () => {
                 <p
                   className="text-[50px] font-bold leading-[1.1] tracking-[-0.03em] text-[#090909]
                   transform-gpu will-change-transform
-                  transition-transform duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
+                  transition-transform duration-200 ease-in-out
                   group-hover:-translate-y-full"
                 >
                   {item.name}
@@ -86,7 +89,7 @@ const Header = () => {
                   className="absolute left-0 top-0 text-[50px] font-bold leading-[1.1] tracking-[-0.03em] text-[#090909]
                   translate-y-full
                   transform-gpu will-change-transform
-                  transition-transform duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
+                  transition-transform duration-200 ease-in-out
                   group-hover:translate-y-0 px-2"
                 >
                   {item.name}
@@ -118,7 +121,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
