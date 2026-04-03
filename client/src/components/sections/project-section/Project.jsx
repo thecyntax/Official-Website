@@ -3,10 +3,10 @@ const Project = () => {
   const portfolioCards = [
     {
       id: 1,
-      title: 'Boltshift.',
+      title: 'NexLab.',
       year: '/2025',
-      image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop',
-      brandName: 'Boltshift',
+      image: '/NexLab.webp',
+      brandName: 'NexLab',
       coloredDots: true,
       logo: (
         <svg className="w-8 h-8 md:w-10 md:h-10 text-white fill-current" viewBox="0 0 24 24">
@@ -51,10 +51,10 @@ const Project = () => {
 
   return (
     <section id="projects" className="bg-[#f5f5f5] ">
-      
+
       {/* SAME CONTAINER AS FOOTER */}
       <div className="px-4 py-10 md:py-12 mx-auto lg:m-10 mb-0 lg:mb-0">
-        
+
         {/* Middle Section: Typography Layout */}
         <div className="w-full flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12 lg:gap-0 mb-20 md:mb-32">
           <div className="w-full lg:w-1/4">
@@ -104,13 +104,24 @@ const Project = () => {
 
                 {/* Card Image Wrapper */}
                 <div className="relative w-full aspect-16/11 md:aspect-4/3 rounded-3xl overflow-hidden cursor-pointer shadow-sm">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
-                  />
+                  {card.image.endsWith('.mp4') ? (
+                    <video
+                      src={card.image}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
+                    />
+                  ) : (
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
+                    />
+                  )}
 
                   {/* Optional dark overlay for better logo contrast */}
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500"></div>
@@ -128,7 +139,7 @@ const Project = () => {
             ))}
           </div>
         </div>
-        
+
       </div>
     </section>
   );
