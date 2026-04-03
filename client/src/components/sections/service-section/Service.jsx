@@ -9,7 +9,6 @@ const servicesData = [
     description:
       "Modern, responsive, and user-friendly websites designed to engage visitors and drive conversions.",
     image: "/des vs dev.webp",
-    // iconLetter: "M",
     categories: [
       "Packaging design",
       "Logo design",
@@ -26,7 +25,6 @@ const servicesData = [
     description:
       "Strategic social campaigns crafted to build brand awareness, engage your target audience, and drive meaningful growth.",
     image: "/vector-1756205138207-12aa66e02248.avif",
-    // iconLetter: "S",
     categories: [
       "Content Creation",
       "Campaign Strategy",
@@ -41,7 +39,6 @@ const servicesData = [
     description:
       "Data-driven SEO and engaging content designed to improve visibility and rank your brand at the top of search results.",
     image: "/vector-1762541291924-8b1ba27cd39c.avif",
-    // iconLetter: "C",
     categories: [
       "Keyword Research",
       "Copywriting",
@@ -55,8 +52,7 @@ const servicesData = [
     title: "Branding and identity",
     description:
       "Memorable brand identities that tell your unique story and establish a lasting connection with your audience.",
-    image: "/premium_vector-1736875279078-a9d32af802d1.avif",
-    // iconLetter: "B",
+    image: "/premium_vector-1764852623031-bc0872f50071.avif",
     categories: ["Logo Design", "Brand Strategy", "Typography", "Color Theory"],
     extraCount: "3+",
   },
@@ -201,24 +197,6 @@ const Service = () => {
                                 }}
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-
-                              <motion.div
-                                initial={{
-                                  scale: 0.9,
-                                  opacity: 0,
-                                  rotate: -18,
-                                }}
-                                animate={{ scale: 1, opacity: 1, rotate: -14 }}
-                                transition={{
-                                  duration: 0.45,
-                                  ease: [0.22, 1, 0.36, 1],
-                                }}
-                                className="absolute -bottom-3 -right-3 w-14 h-14 bg-[#e8e8e8] rounded-2xl flex items-center justify-center shadow-xl border border-white/20"
-                              >
-                                <span className="text-black font-black text-2xl tracking-tighter">
-                                  {service.iconLetter}
-                                </span>
-                              </motion.div>
                             </div>
 
                             {/* Text */}
