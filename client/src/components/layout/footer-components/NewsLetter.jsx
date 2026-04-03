@@ -5,7 +5,7 @@ const NewsLetter = () => {
     <div className="w-full h-full flex flex-col">
       {/* Title */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 sm:mb-8 text-black">
-        Newsletter
+        Reach Us
       </h2>
 
       <form
@@ -14,7 +14,7 @@ const NewsLetter = () => {
       >
         {/* Name Input */}
         <label className="block">
-          <div className="border-b border-gray-300 py-2 focus-within:border-black">
+          <div className="border-b border-gray-300 py-2 focus-within:border-black transition-colors duration-300">
             <input
               type="text"
               placeholder="Your name *"
@@ -26,14 +26,25 @@ const NewsLetter = () => {
 
         {/* Email Input */}
         <label className="block">
-          <div className="border-b border-gray-300 py-2 flex items-center">
+          <div className="border-b border-gray-300 py-2 flex items-center focus-within:border-black transition-colors duration-300">
             <input
               type="email"
               placeholder="Email *"
               className="w-full bg-transparent outline-none text-black placeholder-gray-400 py-2 text-sm md:text-base"
               required
             />
-            <div className="ml-2 text-teal-600">✉</div>
+          </div>
+        </label>
+
+        {/* Message Input */}
+        <label className="block">
+          <div className="border-b border-gray-300 py-2 focus-within:border-black transition-colors duration-300">
+            <textarea
+              placeholder="Your message *"
+              rows={3}
+              className="w-full bg-transparent outline-none text-black placeholder-gray-400 py-2 text-sm md:text-base resize-none"
+              required
+            />
           </div>
         </label>
 
@@ -41,17 +52,17 @@ const NewsLetter = () => {
         <div className="pt-1">
           <button
             type="submit"
-            className="bg-black text-white px-4 py-2 rounded-full flex items-center gap-4 hover:bg-gray-800"
+            className="group bg-black text-white px-6 py-3 rounded-full flex items-center gap-4 hover:bg-gray-800 transition-all duration-300"
           >
-            <span className="text-sm font-semibold">Subscribe</span>
-            <div className="w-1.5 h-1.5 bg-white rounded-full" />
+            <span className="text-sm font-semibold">Send Message</span>
+            <div className="w-1.5 h-1.5 bg-white rounded-full transition-transform duration-300 group-hover:scale-150" />
           </button>
         </div>
       </form>
 
       {/* Footer */}
-      <p className="mt-6 text-gray-500 text-sm md:text-base">
-        Join our newsletter and stay updated on the latest trends.
+      <p className="mt-8 text-gray-500 text-sm md:text-base leading-relaxed">
+        Drop us a message and our team will get back to you as soon as possible.
       </p>
     </div>
   );
