@@ -74,7 +74,7 @@ const Header = () => {
               >
                 {/* ORIGINAL TEXT */}
                 <p
-                  className="text-[50px] font-bold leading-[1.1] tracking-[-0.03em] text-[#090909]
+                  className=" text-[40px] sm:text-[50px] font-bold leading-[1.1] tracking-[-0.03em] text-[#090909]
                   transform-gpu will-change-transform
                   transition-transform duration-200 ease-in-out
                   group-hover:-translate-y-full"
@@ -114,7 +114,9 @@ const Header = () => {
               </div>
 
               {/* RIGHT */}
-              <div className="text-xs md:text-sm">© 2025 The Cyntax Studio</div>
+              <div className="text-xs md:text-sm">
+                © {new Date().getFullYear()} The Cyntax
+              </div>
             </div>
           </div>
         </div>
