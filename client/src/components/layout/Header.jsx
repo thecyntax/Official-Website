@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/images/logo/theCyntax-Logo.png";
+import Logo from "../../assets/images/logo/theCyntax-Logo.webp";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -114,11 +114,9 @@ const Header = () => {
               </div>
 
               {/* RIGHT */}
-              <div className="text-xs md:text-sm">© 2026 The Cyntax Studio</div>
               <div className="text-xs md:text-sm">
                 © {new Date().getFullYear()} The Cyntax
               </div>
-
             </div>
           </div>
         </div>
