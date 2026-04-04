@@ -11,13 +11,13 @@ const Home = () => {
         <Hero />
       </div>
       <OurClients />
-      <div id="why-choose-us" className="scroll-mt-13 lg:scroll-mt-16">
+      <div id="why-choose-us" className="scroll-mt-14 lg:scroll-mt-16">
         <WhyChooseUs />
       </div>
-      <div id="projects" className="scroll-mt-13 lg:scroll-mt-16">
+      <div id="projects" className="scroll-mt-14 lg:scroll-mt-16">
         <Project />
       </div>
-      <div id="services" className="scroll-mt-13 lg:scroll-mt-16">
+      <div id="services" className="scroll-mt-14 lg:scroll-mt-16">
         <Service />
       </div>
     </div>
