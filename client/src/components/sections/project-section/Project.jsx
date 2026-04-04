@@ -3,7 +3,8 @@ const Project = () => {
     {
       id: 1,
       title: "NexLab.",
-      year: "/2025",
+      year: "/2026",
+      link: "https://nexhq.vercel.app/",
       image: "/NexLab.webp",
       brandName: "NexLab",
       coloredDots: true,
@@ -20,7 +21,8 @@ const Project = () => {
     {
       id: 2,
       title: "Volt.",
-      year: "/2025",
+      year: "/2026",
+      link: "#",
       image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
       brandName: "Volt",
       coloredDots: true,
@@ -37,7 +39,8 @@ const Project = () => {
     {
       id: 3,
       title: "Nexus.",
-      year: "/2025",
+      year: "/2026",
+      link: "#",
       image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
       brandName: "Nexus",
       coloredDots: true,
@@ -54,7 +57,8 @@ const Project = () => {
     {
       id: 4,
       title: "Aura.",
-      year: "/2025",
+      year: "/2026",
+      link: "#",
       image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1000&auto=format&fit=crop",
       brandName: "Aura",
       coloredDots: true,
@@ -91,7 +95,7 @@ const Project = () => {
               </h2>
 
               <span className="text-lg sm:text-xl lg:text-[2.2vw] font-bold tracking-tighter text-black mt-1 sm:mt-3">
-                ©2025
+                ©2026
               </span>
             </div>
           </div>
@@ -108,68 +112,85 @@ const Project = () => {
         {/* CARDS */}
         <div className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-12">
-            {portfolioCards.map((card) => (
-              <div key={card.id} className="flex flex-col gap-2 sm:gap-3 group">
-                {/* HEADER BAR */}
-                <div className="bg-white rounded-[16px] sm:rounded-[20px] px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center transition-transform group-hover:-translate-y-1">
-                  <div className="flex items-baseline gap-2 sm:gap-3">
-                    <span className="font-bold text-[14px] sm:text-lg tracking-tight text-black">
-                      {card.title}
-                    </span>
-                    <span className="text-gray-400 text-[10px] sm:text-xs font-medium">
-                      {card.year}
-                    </span>
-                  </div>
-
-                  {/* DOTS */}
-                  <div className="flex gap-1">
-                    <div
-                      className={`w-2 h-2 rounded-full ${card.coloredDots ? "bg-[#ff5f56]" : "bg-gray-200"}`}
-                    ></div>
-                    <div
-                      className={`w-2 h-2 rounded-full ${card.coloredDots ? "bg-[#ffbd2e]" : "bg-gray-200"}`}
-                    ></div>
-                    <div
-                      className={`w-2 h-2 rounded-full ${card.coloredDots ? "bg-[#27c93f]" : "bg-gray-200"}`}
-                    ></div>
-                  </div>
-                </div>
-
-                {/* Card Image Wrapper */}
-                <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer shadow-sm">
-                  {card.image?.endsWith('.mp4') ? (
-                    <video
-                      src={card.image}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
-                    />
-                  ) : (
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-500"></div>
-
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-500"></div>
-
-                  {card.brandName && (
-                    <div className="absolute inset-0 flex items-center justify-center gap-2 sm:gap-3 text-white z-10">
-                      {card.logo}
-                      <span className="font-bold text-lg sm:text-2xl md:text-3xl tracking-tight">
-                        {card.brandName}
+            {portfolioCards.map((card) => {
+              const Wrapper = card.link ? 'a' : 'div';
+              return (
+                <Wrapper
+                  key={card.id}
+                  {...(card.link && card.link !== '#' ? { href: card.link, target: "_blank", rel: "noopener noreferrer" } : { href: card.link || '#' })}
+                  className="flex flex-col gap-2 sm:gap-3 group cursor-pointer block"
+                >
+                  {/* HEADER BAR */}
+                  <div className="bg-white rounded-[16px] sm:rounded-[20px] px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center transition-transform group-hover:-translate-y-1">
+                    <div className="flex items-baseline gap-2 sm:gap-3">
+                      <span className="font-bold text-[14px] sm:text-lg tracking-tight text-black">
+                        {card.title}
+                      </span>
+                      <span className="text-gray-400 text-[10px] sm:text-xs font-medium">
+                        {card.year}
                       </span>
                     </div>
-                  )}
-                </div>
-              </div>
-            ))}
+
+                    {/* DOTS */}
+                    <div className="flex gap-1">
+                      <div
+                        className={`w-2 h-2 rounded-full ${card.coloredDots ? "bg-[#ff5f56]" : "bg-gray-200"}`}
+                      ></div>
+                      <div
+                        className={`w-2 h-2 rounded-full ${card.coloredDots ? "bg-[#ffbd2e]" : "bg-gray-200"}`}
+                      ></div>
+                      <div
+                        className={`w-2 h-2 rounded-full ${card.coloredDots ? "bg-[#27c93f]" : "bg-gray-200"}`}
+                      ></div>
+                    </div>
+                  </div>
+
+                  {/* Card Image Wrapper */}
+                  <div className="relative w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer shadow-sm">
+                    {card.image?.endsWith('.mp4') ? (
+                      <video
+                        src={card.image}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
+                      />
+                    ) : (
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition duration-500"></div>
+
+                    {/* Top Right Arrow Button */}
+                    <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] translate-y-6 group-hover:translate-y-0 scale-75 group-hover:scale-100">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center shadow-xl text-black overflow-hidden relative">
+                        <svg className="absolute w-4 h-4 sm:w-5 sm:h-5 -rotate-45 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[150%] group-hover:-translate-y-[150%]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                        <svg className="absolute w-4 h-4 sm:w-5 sm:h-5 -rotate-45 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {card.brandName && (
+                      <div className="absolute inset-0 flex items-center justify-center gap-2 sm:gap-3 text-white z-10">
+                        {card.logo}
+                        <span className="font-bold text-lg sm:text-2xl md:text-3xl tracking-tight">
+                          {card.brandName}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </Wrapper>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -177,4 +198,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Project; 
