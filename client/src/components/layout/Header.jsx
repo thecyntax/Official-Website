@@ -114,9 +114,11 @@ const Header = () => {
               </div>
 
               {/* RIGHT */}
+              <div className="text-xs md:text-sm">© 2026 The Cyntax Studio</div>
               <div className="text-xs md:text-sm">
                 © {new Date().getFullYear()} The Cyntax
               </div>
+
             </div>
           </div>
         </div>

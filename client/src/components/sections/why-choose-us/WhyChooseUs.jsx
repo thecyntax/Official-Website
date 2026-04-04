@@ -77,8 +77,9 @@ const WhyChooseUs = () => {
                       ({item.id})
                     </span>
 
-                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 flex items-center justify-center text-white/80 transition-all duration-300 group-hover:bg-white group-hover:text-black">
-                      <Icon className="w-4 h-4" />
+                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 flex items-center justify-center text-white/80 transition-all duration-500 group-hover:bg-white group-hover:text-black overflow-hidden relative">
+                      <Icon className="absolute w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[150%] group-hover:-translate-y-[150%]" />
+                      <Icon className="absolute w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0" />
                     </div>
                   </div>
 
