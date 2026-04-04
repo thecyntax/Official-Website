@@ -4,8 +4,8 @@ import Card from "./Card";
 
 const HeroMobile = () => {
   return (
-    <section className="p-2 pt-0 sm:p-3 lg:hidden w-full  overflow-y-auto">
-      <div className="relative h-full overflow-hidden rounded-2xl bg-[#070707] text-white ring-1 ring-white/10 ">
+    <section className="p-2 pt-0 sm:p-3 lg:hidden w-full overflow-y-auto">
+      <div className="relative h-full overflow-hidden rounded-2xl bg-[#070707] text-white ring-1 ring-white/10">
         {/* background layers */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_38%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.05),transparent_35%)]" />
@@ -18,14 +18,13 @@ const HeroMobile = () => {
               <Plus className="w-4 h-4" />
               The Cyntax
             </div>
-
             <Plus className="w-4 h-4 text-white/45" />
           </div>
 
           {/* middle */}
           <div className="flex-1 flex flex-col justify-center">
             <div className="max-w-[380px]">
-              <p className="text-white/55 text-[12px] sm:text-[13px] leading-[1.5] max-w-[260px] mb-4">
+              <p className="text-white/55 text-[12px] sm:text-[13px] leading-normal max-w-[260px] mb-4">
                 We build digital experiences with sharp typography, calm
                 spacing, and strong conversion intent.
               </p>
@@ -35,7 +34,6 @@ const HeroMobile = () => {
                   Craft the
                 </span>
 
-                {/* 🔥 Responsive controlled heading */}
                 <span className="font-bold text-[clamp(48px,16vw,90px)] leading-[0.9]">
                   Syntax.
                 </span>
@@ -46,9 +44,15 @@ const HeroMobile = () => {
                 <div className="h-px flex-1 bg-white/20" />
                 <Plus className="w-4 h-4" />
               </div>
+            </div>
+          </div>
 
+          {/* bottom */}
+          <div className="flex flex-col gap-3 sm:gap-4 pb-1">
+            {/* 🔥 unified spacing block */}
+            <div className="flex flex-col gap-2 mt-4">
               {/* services */}
-              <div className="mt-4 grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 {[
                   "UI/UX Systems",
                   "Web & App Development",
@@ -63,20 +67,19 @@ const HeroMobile = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
 
-          {/* bottom */}
-          <div className="flex flex-col gap-3 sm:gap-4 pb-1">
-            <div className="rounded-2xl mt-2 border border-white/10 bg-white/5 p-3 sm:p-5 backdrop-blur-sm">
-              <p className="text-[14px] sm:text-[16px] font-medium leading-[1.3] text-white/90">
-                No templates. No noise.
-              </p>
-              <p className="mt-1 text-[12px] sm:text-[14px] leading-[1.5] text-white/45">
-                Just refined digital products that help your business grow.
-              </p>
+              {/* card */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-3 sm:p-5 backdrop-blur-sm">
+                <p className="text-[14px] sm:text-[16px] font-medium leading-[1.3] text-white/90">
+                  No templates. No noise.
+                </p>
+                <p className="mt-1 text-[12px] sm:text-[14px] leading-normal text-white/45">
+                  Just refined digital products that help your business grow.
+                </p>
+              </div>
             </div>
 
+            {/* CTA + footer */}
             <div className="flex flex-col gap-3">
               <div className="w-full">
                 <Card />
