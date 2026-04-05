@@ -44,14 +44,14 @@ const Hero = () => {
           </video>
         )}
         {/* 🌑 Overlay */}
-        <div className="absolute inset-0 bg-black/30 z-[1]" />
+        <div className="absolute inset-0 bg-black/30 z-1" />
         {/* 🎞 Grain */}
-        <div className="absolute inset-0 z-[2] mix-blend-screen opacity-50 pointer-events-none">
+        <div className="absolute inset-0 z-2 mix-blend-screen opacity-50 pointer-events-none">
           <GrainEffect />
         </div>
         {/* ✨ Light gradients */}
-        <div className="absolute inset-0 z-[3] bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%)] pointer-events-none" />
-        <div className="absolute inset-0 z-[3] bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.05),transparent_40%)] pointer-events-none" />
+        <div className="absolute inset-0 z-3 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%)] pointer-events-none" />
+        <div className="absolute inset-0 z-3 bg-[radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.05),transparent_40%)] pointer-events-none" />
         {/* 🧱 MAIN GRID */}
         <div className="relative z-10 h-full min-h-full grid grid-cols-12 px-10 xl:px-16 py-10 gap-6">
           {/* LEFT */}
